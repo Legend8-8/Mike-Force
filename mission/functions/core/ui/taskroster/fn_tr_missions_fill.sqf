@@ -72,9 +72,9 @@ vn_tr_taskList = [];
 		//Backup: Colors: VN_TR_MISS_PRIM - VN_TR_MISS_SECO - VN_TR_MISS_SUPP
 		private _typeData = switch(_task_category)do
 		{
-			case "PRI":	{[0, "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa"]};
-			case "SEC":	{[50, "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa"]};
-			case "SUP":	{[100, "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa"]};
+			case "PRI":	{[0, "ui\taskroster\img\icons\vn_icon_task_primary.paa"]};
+			case "SEC":	{[50, "ui\taskroster\img\icons\vn_icon_task_secondary.paa"]};
+			case "SUP":	{[100, "ui\taskroster\img\icons\vn_icon_task_support.paa"]};
 			default {[1, "Vn\ui_f_vietnam\ui\debrief\sticky.paa"]};
 		};
 		private _orderValue = (_typeData#0)+_forEachIndex;

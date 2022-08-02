@@ -57,29 +57,31 @@ private _missionPage_main_background_image = VN_TR_MISSIONLIST_CTRL lnbData [_li
 if(_missionPage_main_background_image isEqualTo "")then
 {
 	_missionPage_main_background_image = selectRandom [
-		"\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_1.paa",
-		"\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_2.paa",
-		"\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_3.paa"
+		"ui\taskroster\img\tr_missionsheet_P_M_1.paa",
+		"ui\taskroster\img\tr_missionsheet_P_M_2.paa",
+		"ui\taskroster\img\tr_missionsheet_P_M_3.paa"
 	];
 	//set the Bg Img as fixed, as long as the TR is openend
 	VN_TR_MISSIONLIST_CTRL lnbSetData [[_list_index, 0], _missionPage_main_background_image];
 };
 VN_TR_MISSIONSHEET_IMG_CTRL ctrlSetText _missionPage_main_background_image;
 VN_TR_MISSIONSHEET_TASKS_CTRL ctrlSetStructuredText parseText "Tasks:";
+VN_TR_MISSIONSHEET_TASKS_CTRL ctrlSetTextColor [1,1,1,1];
 lbClear VN_TR_MISSIONSHEET_TASKS_LIST_CTRL;
 (vn_tr_taskList#_list_index) params["_sortOrder","_parent_category","_parent_classname","_parent"];
 {
 	(taskDescription _x) params ["_taskDesc", "_taskTitle", "_taskWpDesc"];
 	private _ind = VN_TR_MISSIONSHEET_TASKS_LIST_CTRL lbAdd _taskTitle;
-	private _taskIcon = ["\vn\ui_f_vietnam\ui\taskroster\img\box_unchecked.paa", "\vn\ui_f_vietnam\ui\taskroster\img\box_checked.paa"] select taskCompleted _x;
+	private _taskIcon = ["ui\taskroster\img\box_unchecked.paa", "ui\taskroster\img\box_checked.paa"] select taskCompleted _x;
 	if (currentTask player == _x) then {
 		VN_TR_MISSIONSHEET_TASKS_LIST_CTRL lbSetCurSel _ind;
 	};
 	VN_TR_MISSIONSHEET_TASKS_LIST_CTRL lbSetPicture [_ind, _taskIcon];
+	lbSetColor [VN_TR_MISSIONSHEET_TASKS_LIST_CTRL, _ind, [1,1,1,1]];
 	VN_TR_MISSIONSHEET_TASKS_LIST_CTRL setVariable [format ["taskIndex%1", _ind], _x];
 }forEach taskChildren _parent;
 _imgPath = getText(missionconfigfile >> "gamemode" >> "tasks" >> _parent_classname >> "taskimage");
-if(_imgPath == "")then{_imgPath = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa";};	//If nothing found -> load Placeholder
+if(_imgPath == "")then{_imgPath = "ui\taskroster\img\icons\vn_icon_task_secondary.paa";};	//If nothing found -> load Placeholder
 VN_TR_MISSION_PIC_CTRL ctrlSetText _imgPath;
 //--- Load right page
 [VN_TR_MISSIONLIST_CTRL, _list_index] call vn_mf_fnc_tr_listboxtask_select;

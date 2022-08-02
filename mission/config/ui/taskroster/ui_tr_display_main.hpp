@@ -29,17 +29,11 @@ class vn_tr_disp_taskRoster_Main
 			h = VN_TR_FOLDER_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_folder_background_sheetL.paa";
+			text = "ui\taskroster\img\tr_folder_background_sheetL.paa";
 			tooltip = "";
 		};
 		
 		class vn_sheet_overview: vn_sheet_overview_accepted_base
-		{
-			idc = -1;
-		};
-		
-		//Background Image
-		class vn_sheet_clean_R: vn_sheet_clean_R_base
 		{
 			idc = -1;
 		};
@@ -93,7 +87,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(2.5);
 			h = UIH(2.5);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0};
 			colorFocused[] = {0,0,0,0};
 			colorShadow[] = {0,0,0,0};
@@ -114,7 +108,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(7.5);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_characterInfo_show";
@@ -131,7 +125,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(7.5);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_mainInfo_show;";
@@ -149,7 +143,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(6.5);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_mainInfo_show;";
@@ -167,7 +161,7 @@ class vn_tr_disp_taskRoster_Main
 			// colorText[] = {0.3,0.3,0.3,1};
 			colorText[] = {VN_TR_MISS_PRIM};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa";
+			text = "ui\taskroster\img\icons\vn_icon_task_primary.paa";
 		};
 		
 		class zone_b: vn_mf_RscButton
@@ -180,7 +174,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(6.5);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_mainInfo_show;";
@@ -196,7 +190,7 @@ class vn_tr_disp_taskRoster_Main
 			h = UIH(1);
 			colorText[] = {VN_TR_MISS_SECO};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa";
+			text = "ui\taskroster\img\icons\vn_icon_task_primary.paa";
 		};
 		class requestMission: vn_mf_RscButton
 		{
@@ -208,7 +202,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(14);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "call vn_mf_fnc_tr_cleanRightSheet; call vn_mf_fnc_tr_supportTask_show;";
@@ -227,7 +221,7 @@ class vn_tr_disp_taskRoster_Main
 			
 			colorText[] = {VN_TR_MISS_SUPP};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa";
+			text = "ui\taskroster\img\icons\vn_icon_task_support.paa";
 		};
 		
 		class mission_active: vn_mf_RscButton
@@ -242,7 +236,7 @@ class vn_tr_disp_taskRoster_Main
 			
 			text = "No active Task";
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "[controlNull, -1] call vn_mf_fnc_tr_missions_show;";
@@ -257,7 +251,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
 			text = "";
 		};
@@ -281,7 +275,7 @@ class vn_tr_disp_taskRoster_Main
 			//colorText[] = {0,0,0,1};
 			colorBackground[] = {0,0,0,1};
 			
-			colorText[] = {0,0,0,1}; // Text and frame color
+			colorText[] = {1,1,1,1}; // Text and frame color
 			colorSelect[] = {0,0,0,1}; // Text selection color
 			colorSelect2[] = {0,0,0,1}; // Text selection color (oscillates between this and colorSelect)
 			colorDisabled[] = {1,1,1,0.5}; // Disabled text color
@@ -305,7 +299,7 @@ class vn_tr_disp_taskRoster_Main
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "Mute";
@@ -322,7 +316,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
 			onButtonClick = "1 radioChannelAdd [player];6 enableChannel [true, true];['TaskSucceeded',['','Ground communication enabled!']] call para_c_fnc_show_notification;";
 		};
 
@@ -334,7 +328,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce.paa";
+			text = "ui\taskroster\img\logos\Logo_MikeForce.paa";
 			onButtonClick = "1 radioChannelRemove [player];['TaskSucceeded',['','Ground communication disabled!']] call para_c_fnc_show_notification;";
 		};
 		
@@ -346,7 +340,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_ACAV_HL.paa";
 			onButtonClick = "3 radioChannelAdd [player];8 enableChannel [true, true];['TaskSucceeded',['','ACAV communication enabled!']] call para_c_fnc_show_notification;";
 		};
 		
@@ -358,7 +352,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV.paa";
+			text = "ui\taskroster\img\logos\Logo_ACAV.paa";
 			onButtonClick = "3 radioChannelRemove [player];['TaskSucceeded',['','ACAV communication disabled!']] call para_c_fnc_show_notification;";
 		};
 
@@ -370,7 +364,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_Hornets_HL.paa";
 			onButtonClick = "2 radioChannelAdd [player];7 enableChannel [true, true];['TaskSucceeded',['','Air communication enabled!']] call para_c_fnc_show_notification;";
 		};
 
@@ -382,7 +376,7 @@ class vn_tr_disp_taskRoster_Main
 			w = UIW(1);
 			h = UIH(1);
 			tooltip = "";
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets.paa";
+			text = "ui\taskroster\img\logos\Logo_Hornets.paa";
 			onButtonClick = "2 radioChannelRemove [player];['TaskSucceeded',['','Air communication disabled!']] call para_c_fnc_show_notification;";
 		};
 		

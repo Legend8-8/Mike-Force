@@ -24,12 +24,13 @@ if not is_admin():
     # Re-run the program with admin rights
     ret = ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
 else:
-    mission_stem = "bn_mikeforce_indev"
+    mission_stem = "bn_mikeforce2035_indev"
 
     content_root = Path(__file__).parent
     mission_root = content_root / "mission"
     paradigm_path = Path(user_paths.PARADIGM_PATH)
     map_root = content_root / "maps"
+    
     map_folders = [ map_path for map_path in map_root.iterdir() if map_path.is_dir() ]
 
     arma_missions_folder = Path(user_paths.MISSIONS_PATH)

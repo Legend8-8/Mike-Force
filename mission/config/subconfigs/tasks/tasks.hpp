@@ -6,7 +6,7 @@ class task
 	//Code that produces variables that are applied to the task name using the 'format' command
 	taskformatdata = "[(_this getVariable 'taskMarker') call vn_mf_fnc_zone_marker_to_name]";
 	taskdesc = "This should not be seen. If you are seeing this, something is mis-configured.";
-	taskimage = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa";
+	taskimage = "ui\taskroster\img\icons\vn_icon_task_secondary.paa";
 	taskgroups[] = {"MikeForce","SpikeTeam","ACAV","GreenHornets"}; // all
 	requestgroups[] = {};
 	tasktype = "walk";

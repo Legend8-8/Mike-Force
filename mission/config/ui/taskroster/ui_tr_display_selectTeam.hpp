@@ -24,13 +24,7 @@ class vn_tr_disp_selectTeam
 			h = VN_TR_FOLDER_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_folder_background_sheetL.paa";
-		};
-		
-		//MUST be in the background, otherwise it could "pop up", when clicking on it, covering up the cordles (silly Arma, y u do dis? :sad:)
-		class vn_sheet_clean_R: vn_sheet_clean_R_base
-		{
-			idc = -1;
+			text = "ui\taskroster\img\tr_folder_background_sheetL.paa";
 		};
 	};
 	
@@ -68,7 +62,7 @@ class vn_tr_disp_selectTeam
 			w = UIW(16);
 			h = UIH(1);
 			
-			colorText[] = {0,0,0,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			sizeEx = TXT_S;
 			text = "";
@@ -76,7 +70,7 @@ class vn_tr_disp_selectTeam
 			class Attributes
 			{
 				align = "center";
-				color = "#000000";
+				color = "#FFFFFF";
 				colorLink = "#D09B43";
 				font = USEDFONT;
 				size = 1.1;
@@ -92,7 +86,7 @@ class vn_tr_disp_selectTeam
 			w = UIW(16);
 			h = UIH(12);
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.0};
 			sizeEx = TXT_XS;
 			text = "";
@@ -100,7 +94,7 @@ class vn_tr_disp_selectTeam
 			class Attributes
 			{
 				align = "left";
-				color = "#000000";
+				color = "#FFFFFF";
 				colorLink = "#D09B43";
 				font = USEDFONT;
 				size = 0.625;
@@ -121,7 +115,7 @@ class vn_tr_disp_selectTeam
 			font = USEDFONT;
 			sizeEx = TXT_L;
 			onButtonClick = "[] call vn_mf_fnc_tr_selectTeam_set; (ctrlParent param[0]) closeDisplay 1;";
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			colorBackgroundActive[] = {0,0,0,0.05};
 			colorFocused[] = {0,0,0,0.01};
@@ -139,7 +133,7 @@ class vn_tr_disp_selectTeam
 			font = USEDFONT;
 			sizeEx = TXT_L;
 			onButtonClick = (ctrlParent param[0]) closeDisplay 2;
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			colorBackgroundActive[] = {0,0,0,0.05};
 			colorFocused[] = {0,0,0,0.01};

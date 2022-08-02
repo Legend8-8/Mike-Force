@@ -308,16 +308,4 @@ player addEventHandler ["AnimStateChanged" , {
 	};
 }];
 
-
-["checkLookedAtLogVeh", {
-	if (player getVariable ["vn_mf_db_hasLookedAtLogVeh", false]) then {
-		["checkLookedAtLogVeh"] call para_g_fnc_scheduler_remove_job;
-	};
-	private _cursorobject = cursorTarget;
-	//if (!isNull _cursorobject && (tolower typeof _cursorobject) in vn_log_vehicle_list) then {
-	if ((!isNull _cursorobject && (tolower typeof _cursorobject) in vn_log_vehicle_list) || ((cursorTarget distance player) < 5.5 && {alive cursorTarget && {vehicle player isEqualTo player && {crew cursorTarget isEqualTo [] && {vn_log_item_list findIf {_x == typeof cursorTarget} > -1 && {!vn_log_moving_object}}}}})) then {
-		["hasLookedAtLogVeh", [player, []]] call para_g_fnc_event_dispatch;
-	}; 
-}, [], 10] call para_g_fnc_scheduler_add_job;
-
 true

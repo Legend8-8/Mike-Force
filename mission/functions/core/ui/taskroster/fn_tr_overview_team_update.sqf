@@ -42,7 +42,7 @@ VN_TR_TEAMNAME_CTRL ctrlSetText _groupNameFull;
 VN_TR_TEAMLOGO_CTRL ctrlSetText _groupIcon;
 
 
-_groupNameBold = format["<t align='center' font='tt2020base_vn_bold'>%1</t>", _groupName];
+_groupNameBold = format["<t align='center' font='RobotoCondensedBold'>%1</t>", _groupName];
 VN_TR_MAININFO_TXT_TOP_CTRL ctrlSetStructuredText parsetext format[localize "STR_vn_mf_taskRoster_Main_teamWelcome", _groupNameBold];
 VN_TR_MAININFO_IMG_CTRL ctrlSetText _groupIcon;
 

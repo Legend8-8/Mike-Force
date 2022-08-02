@@ -187,25 +187,25 @@ class destinations
 {
 	class spiketeam_base
 	{
-		image = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tel_spikebase_ca.paa";
+		image = "ui\wheelmenu\img\icons\vn_ico_mf_tel_spikebase_ca.paa";
 		position_marker = "mf_respawn_spiketeam";
 	};
 
 	class mikeforce_base
 	{
-		image = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tel_mikebase_ca.paa";
+		image = "ui\wheelmenu\img\icons\vn_ico_mf_tel_mikebase_ca.paa";
 		position_marker = "mf_respawn_mikeforce";
 	};
 
 	class acav_base
 	{
-		image = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tel_acavbase_ca.paa";
+		image = "ui\wheelmenu\img\icons\vn_ico_mf_tel_acavbase_ca.paa";
 		position_marker = "mf_respawn_acav";
 	};
 
 	class greenhornets_base
 	{
-		image = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_tel_airbase_ca.paa";
+		image = "ui\wheelmenu\img\icons\vn_ico_mf_tel_airbase_ca.paa";
 		position_marker = "mf_respawn_greenhornets";
 	};
 

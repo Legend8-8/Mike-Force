@@ -27,6 +27,6 @@ params
 	,((	[
 			 (missionConfigFile >> "gamemode" >> "awards_config" >> _name)
 			,"levels"
-			,[ "\vn\ui_f_vietnam\ui\taskroster\img\medal_placeholder.paa" ,"\vn\ui_f_vietnam\ui\taskroster\img\medal_placeholder.paa" ]
+			,[ "ui\taskroster\img\medal_placeholder.paa" ,"ui\taskroster\img\medal_placeholder.paa" ]
 		] call para_g_fnc_get_gamemode_value ) select _level ) select 0
 ] call para_c_fnc_infopanel_addToQueue;

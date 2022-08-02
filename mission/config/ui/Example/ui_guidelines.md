@@ -107,7 +107,7 @@ The following fonts can be used for UIs in Mikeforce and VN in general:
     <td>Details</td>
   </tr>
   <tr>
-    <td><code>"tt2020base_vn"</code></td>
+    <td><code>"RobotoCondensed"</code></td>
     <td><code>USEDFONT</code></td>
     <td>Default font</td>
   </tr>
@@ -115,12 +115,12 @@ The following fonts can be used for UIs in Mikeforce and VN in general:
     <td colspan=3><img src="https://ctrlcctrlv.github.io/TT2020/docs/TT2020Base-Regular.png"></td>
   </tr>
   <tr>
-    <td><code>"tt2020base_vn_bold"</code></td>
+    <td><code>"RobotoCondensedBold"</code></td>
     <td><code>USEDFONT_B</code></td>
     <td>Bold default font</td>
   </tr>
   <tr>
-    <td><code>"tt2020style_e_vn"</code></td>
+    <td><code>"PuristaMedium"</code></td>
     <td><code>USEDFONT_ALT</code></td>
     <td>Alternative font</td>
   </tr>
@@ -128,7 +128,7 @@ The following fonts can be used for UIs in Mikeforce and VN in general:
     <td colspan=3><img src="https://ctrlcctrlv.github.io/TT2020/docs/TT2020StyleE-Regular.png"></td>
   </tr>
   <tr>
-    <td><code>"tt2020style_e_vn_bold"</code></td>
+    <td><code>"PuristaSemibold"</code></td>
     <td><code>USEDFONT_ALT_B</code></td>
     <td>Bold alternative font</td>
   </tr>

@@ -43,7 +43,7 @@ _progress = call vn_mf_fnc_points_to_next_rank;
 VN_TR_CHARINFO_PROGR_CTRL ctrlSetText str(_progress);
 
 
-VN_TR_CHARINFO_REWARD_TEXT_CTRL ctrlSetStructuredText parseText "<t size='0.6' font='tt2020base_vn'>Description for current Medal or Ribbon shown. More textspace blablabla roflcopter blub bla, i like trains and more stuff to add omgwtf stuff thingy</t>";
+VN_TR_CHARINFO_REWARD_TEXT_CTRL ctrlSetStructuredText parseText "<t size='0.6' font='RobotoCondensed'>Description for current Medal or Ribbon shown. More textspace blablabla roflcopter blub bla, i like trains and more stuff to add omgwtf stuff thingy</t>";
 _ctrl_text ctrlCommit 0;
 
 private _awards_cur = player getVariable ["vn_mf_db_awards",vn_mf_default_awards];

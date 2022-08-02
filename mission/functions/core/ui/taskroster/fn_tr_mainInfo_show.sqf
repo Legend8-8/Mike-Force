@@ -24,7 +24,8 @@ private _groupNameFull = getText(_groupConfig >> "name");
 private _groupIcon = getText(_groupConfig >> "icon");
 private _groupName = getText(_groupConfig >> "shortname");
 VN_TR_MAININFO_IMG_CTRL ctrlSetText _groupIcon;
-_groupNameBold = format["<t align='center' font='tt2020base_vn_bold'>%1</t>", _groupName];
+_groupNameBold = format["<t align='center' font='RobotoCondensedBold'>%1</t>", _groupName];
+VN_TR_MAININFO_TXT_TOP_CTRL ctrlSetTextColor [1,1,1,1];
 VN_TR_MAININFO_TXT_TOP_CTRL ctrlSetStructuredText parsetext format[localize "STR_vn_mf_taskRoster_Main_teamWelcome", _groupNameBold];
 
 //new
@@ -40,6 +41,7 @@ _text = switch _groupID do {
 VN_TR_MAININFO_TXT_MID_CTRL ctrlSetStructuredText parseText format [localize _text, format ["<img size='5' color='#FFFFFF' image='%1'/>", _groupIcon]];
 VN_TR_MAININFO_TXT_MID_CTRL ctrlSetPositionH (ctrlTextHeight VN_TR_MAININFO_TXT_MID_CTRL);
 VN_TR_MAININFO_TXT_MID_CTRL ctrlCommit 0;
+VN_TR_MAININFO_TXT_MID_CTRL ctrlSetTextColor [1,1,1,1];
 
 private _traitConfigs = "true" configClasses (missionConfigFile >> "gamemode" >> "traits");
 
@@ -49,7 +51,7 @@ private _traitConfigs = "true" configClasses (missionConfigFile >> "gamemode" >>
 private _seperator = VN_DISP_TR_TASKROSTER ctrlCreate ["vn_mf_RscText", -1, VN_TR_MAININFO_GRP_ROLES_CTRL];
 _seperator ctrlSetPosition [0, 0, UIW(15), pixelH];
 _seperator ctrlCommit 0;
-_seperator ctrlSetBackgroundColor [0,0,0,1];
+_seperator ctrlSetBackgroundColor [1,1,1,1];
 _tgH = pixelH + UIH(0.1); // keep track of the y position in the controls group for the next row
 
 {
@@ -68,12 +70,13 @@ _tgH = pixelH + UIH(0.1); // keep track of the y position in the controls group 
 	_ctrlRoleName ctrlCommit 0;
 	_ctrlRoleName ctrlSetText getText (_traitConfig >> "icon");
 	_ctrlRoleName ctrlSetTooltip (getText (_traitConfig >> "text") call para_c_fnc_localize);
-	_ctrlRoleName ctrlSetTextColor [0,0,0,0.8];
+	_ctrlRoleName ctrlSetTextColor [1,1,1,0.8];
 	//--- Tasks, column 2
 	private _ctrlRoleTasks = VN_DISP_TR_TASKROSTER ctrlCreate ["vn_mf_RscStructuredText",-1,_ctrlSingleRoleGroup];
 	_nCtrls pushBack _ctrlRoleTasks;
 	_ctrlRoleTasks ctrlSetPosition [UIW(3), 0, UIW(6.5), UIH(1)];
 	_ctrlRoleTasks ctrlCommit 0;
+	_ctrlRoleTasks ctrlSetTextColor [1,1,1,0.8];
 	private _roleTasks = switch _traitName do {
 		case "medic":{localize "STR_vn_mf_taskRoster_Main_medicTasks"};
 		case "engineer":{localize "STR_vn_mf_taskRoster_Main_engineerTasks"};
@@ -87,6 +90,7 @@ _tgH = pixelH + UIH(0.1); // keep track of the y position in the controls group 
 	private _ctrlListPlayers = VN_DISP_TR_TASKROSTER ctrlCreate ["vn_mf_RscStructuredText", -1, _ctrlSingleRoleGroup];
 	_nCtrls pushBack _ctrlListPlayers;
 	_ctrlListPlayers ctrlSetPosition [UIW(9.5), 0, UIW(5.5), UIH(1)];
+	_ctrlListPlayers ctrlSetTextColor [1,1,1,0.8];
 	_ctrlListPlayers ctrlCommit 0;
 	private _t = [];
 	//--- Find the roles of the players
@@ -107,6 +111,6 @@ _tgH = pixelH + UIH(0.1); // keep track of the y position in the controls group 
 	_seperator = VN_DISP_TR_TASKROSTER ctrlCreate ["RscText", -1, VN_TR_MAININFO_GRP_ROLES_CTRL];
 	_seperator ctrlSetPosition [0, _tgH, UIW(15), pixelH];
 	_seperator ctrlCommit 0;
-	_seperator ctrlSetBackgroundColor [0,0,0,1];
+	_seperator ctrlSetBackgroundColor [1,1,1,1];
 	_tgH = _tgH + pixelH + UIH(0.1);
 } forEach _traitConfigs;

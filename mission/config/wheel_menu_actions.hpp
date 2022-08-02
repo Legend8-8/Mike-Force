@@ -34,7 +34,7 @@ class wheel_menu_actions
 		visible = "ALWAYS";
 		condition = "!(localNamespace getVariable ['vn_mf_earplugs', false])";
 		text = "STR_VN_QOL_EARPLUGS_IN";
-		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_ear_in_ca.paa";
+		icon = "ui\wheelmenu\img\icons\vn_ico_mf_ear_in_ca.paa";
 		icon_highlighted = "";
 		arguments = "true";
 		function = "vn_mf_fnc_earplugs";
@@ -47,7 +47,7 @@ class wheel_menu_actions
 		visible = "ALWAYS";
 		condition = "(localNamespace getVariable ['vn_mf_earplugs', false])";
 		text = "STR_VN_QOL_EARPLUGS_OUT";
-		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_ear_out_ca.paa";
+		icon = "ui\wheelmenu\img\icons\vn_ico_mf_ear_out_ca.paa";
 		icon_highlighted = "";
 		arguments = "false";
 		function = "vn_mf_fnc_earplugs";
@@ -60,7 +60,7 @@ class wheel_menu_actions
 		visible = "ALWAYS";
 		condition = "_target call para_g_fnc_is_resupply";
 		text = $STR_vn_mf_add_sandbag;
-		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_resupply_ca.paa";
+		icon = "ui\wheelmenu\img\icons\vn_ico_mf_resupply_ca.paa";
 		icon_highlighted = "";
 		arguments = "_target";
 		function = "para_c_fnc_resupply_building_with_sandbag";
@@ -73,7 +73,7 @@ class wheel_menu_actions
 		visible = "ALWAYS";
 		condition = "_target call para_g_fnc_is_resupply";
 		text = $STR_vn_mf_resupply;
-		icon = "\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_resupply_ca.paa";
+		icon = "ui\wheelmenu\img\icons\vn_ico_mf_resupply_ca.paa";
 		icon_highlighted = "";
 		arguments = "_target";
 		function = "para_c_fnc_resupply_building_with_crate";

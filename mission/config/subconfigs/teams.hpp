@@ -2,7 +2,7 @@
 class MikeForce
 {
     name = "Mike Force [Infantry]";
-    icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
+    icon = "ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
     shortname = "Mike Force";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
@@ -38,7 +38,7 @@ class MikeForce
 class SpikeTeam
 {
     name = "Spike Team [Special Forces]";
-    icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
+    icon = "ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
     shortname = "Spike Team";
     unit = "vn_b_men_army_01";
     color = "ColorUNKNOWN";
@@ -75,7 +75,7 @@ class SpikeTeam
 class ACAV
 {
     name = "Armored Cavalry [Ground Support]";
-    icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
+    icon = "ui\taskroster\img\logos\Logo_ACAV_HL.paa";
     shortname = "ACAV";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
@@ -111,7 +111,7 @@ class ACAV
 class GreenHornets
 {
     name = "Green Hornets [Air Support]";
-    icon = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
+    icon = "ui\taskroster\img\logos\Logo_Hornets_HL.paa";
     shortname = "Green Hornets";
     unit = "vn_b_men_army_01";
     color = "ColorIndependent";

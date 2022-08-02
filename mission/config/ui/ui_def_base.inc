@@ -153,10 +153,10 @@
 #define COLOR_KEYBINDINGS_DOUBLEBIND_UNSELECTED [1,0,0,0.5]
 
 //Text stuff:
-#define USEDFONT "tt2020base_vn"
-#define USEDFONT_B "tt2020base_vn_bold"
-#define USEDFONT_ALT "tt2020style_e_vn"
-#define USEDFONT_ALT_B "tt2020style_e_vn_bold"
+#define USEDFONT "RobotoCondensed"
+#define USEDFONT_B "RobotoCondensedBold"
+#define USEDFONT_ALT "PuristaMedium"
+#define USEDFONT_ALT_B "PuristaSemibold"
 
 #define CALCRESANDAR	UIY_CALC_A
 #define TXT_CST(NUM)	(UIY_CALC_A * NUM)
@@ -174,10 +174,10 @@
 
 //TASK ROSTER STANDARD VALUES:
 //Background folder
-#define VN_TR_FOLDER_X			UIX_CL(22.2)
-#define VN_TR_FOLDER_Y			UIY_CU(12.5)
-#define VN_TR_FOLDER_W			UIW(44.4)
-#define VN_TR_FOLDER_H			UIH(25)
+#define VN_TR_FOLDER_X			UIX_CL(21.2)
+#define VN_TR_FOLDER_Y			UIY_CU(14.5)
+#define VN_TR_FOLDER_W			UIW(43.4)
+#define VN_TR_FOLDER_H			UIH(28)
 
 //Sheet: LEFT side
 #define VN_TR_SHEET_L_X			UIX_CL(19)

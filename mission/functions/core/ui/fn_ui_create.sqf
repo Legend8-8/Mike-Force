@@ -58,7 +58,7 @@ private _heightMultiplier = 0;
 	private _iconControl = _display ctrlCreate ["vn_mf_RscPicture", -1];
 	private _iconSize = _staminaH * (1 - _gutterRatio * 2);
 	private _iconPosition = [_staminaX + _gutterWidth, _staminaY + _gutterHeight, _iconSize * (3 / 4), _iconSize];
-	private _icon = format ["\vn\ui_f_vietnam\ui\wheelmenu\img\icons\vn_ico_mf_hud_%1_ca.paa", _name];
+	private _icon = format ["ui\wheelmenu\img\icons\vn_ico_mf_hud_%1_ca.paa", _name];
 	_iconControl ctrlSetPosition _iconPosition;
 	_iconControl ctrlSetText _icon;
 	_iconControl ctrlCommit 0;

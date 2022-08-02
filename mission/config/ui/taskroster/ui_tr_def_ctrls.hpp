@@ -11,23 +11,9 @@ class vn_tr_cordels: vn_mf_RscPicture
 	
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {1,1,1,1};
-	text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_folder_cordels.paa";
+	text = "ui\taskroster\img\tr_folder_cordels.paa";
 	tooltip = "";
 	onLoad = "(_this#0) ctrlenable false;";
-};
-//Clean Sheet, already adjusted to Standard Folder Size and correct position
-class vn_sheet_clean_R_base: vn_mf_RscPicture
-{
-	idc = -1;
-	x = VN_TR_SHEET_R_X;
-	y = VN_TR_SHEET_R_Y;
-	w = VN_TR_SHEET_R_W;
-	h = VN_TR_SHEET_R_H;
-	
-	colorText[] = {1,1,1,1};
-	colorBackground[] = {1,1,1,1};
-	text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_sheet_clean.paa";
-	tooltip = "";
 };
 
 class vn_sheet_overview_base: vn_mf_RscPicture
@@ -40,14 +26,14 @@ class vn_sheet_overview_base: vn_mf_RscPicture
 
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {1,1,1,1};
-	text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_overview.paa";
+	text = "ui\taskroster\img\tr_overview.paa";
 	tooltip = "";
 };
 
 class vn_sheet_overview_accepted_base: vn_sheet_overview_base
 {
 	idc = -1;
-	text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_overview_accepted.paa";
+	text = "ui\taskroster\img\tr_overview_accepted.paa";
 };
 
 class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
@@ -72,7 +58,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(15.5);
 			h = UIH(0.9);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_M;
 			text = "Choose your team.";	//loc
@@ -87,7 +73,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(15.5);
 			h = UIH(1.6);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_S;
 			text = "Active Players:";	//loc
@@ -122,8 +108,8 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce.paa";
-			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_MikeForce.paa";
+			textUp = "ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
 			
 			onButtonClick = "['MikeForce'] call vn_mf_fnc_tr_selectTeam;";
 		};
@@ -138,8 +124,8 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV.paa";
-			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_ACAV_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_ACAV.paa";
+			textUp = "ui\taskroster\img\logos\Logo_ACAV_HL.paa";
 			
 			onButtonClick = "['ACAV'] call vn_mf_fnc_tr_selectTeam;";
 		};
@@ -154,8 +140,8 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets.paa";
-			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_Hornets_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_Hornets.paa";
+			textUp = "ui\taskroster\img\logos\Logo_Hornets_HL.paa";
 			
 			onButtonClick = "['GreenHornets'] call vn_mf_fnc_tr_selectTeam;";
 		};
@@ -170,8 +156,8 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			tooltip = "";
 			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam.paa";
-			textUp = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_SpikeTeam.paa";
+			textUp = "ui\taskroster\img\logos\Logo_SpikeTeam_HL.paa";
 			
 			onButtonClick = "['SpikeTeam'] call vn_mf_fnc_tr_selectTeam;";
 		};
@@ -376,7 +362,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(15.5);
 			h = UIH(1.2);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_M;
 			text = "Select a Team";	//loc
@@ -391,7 +377,7 @@ class vn_tr_selectTeam_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(15.5);
 			h = UIH(2.8);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0};
 			size = TXT_S;
 			text = "Take the fight to the VC in close quarter combat. Access to static weapon emplacements";	//loc
@@ -423,7 +409,7 @@ class vn_tr_supportRequest_miniMap_accept: vn_mf_RscButton
 	w = UIW(8);
 	h = UIH(2);
 	
-	colorText[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.5};
 	sizeEx = TXT_S;
 	
@@ -442,7 +428,7 @@ class vn_tr_supportRequest_miniMap_abort: vn_mf_RscButton
 	w = UIW(8);
 	h = UIH(2);
 	
-	colorText[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,0.5};
 	sizeEx = TXT_S;
 	
@@ -473,7 +459,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = VN_TR_SHEET_L_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_CreateSupportTask.paa";
+			text = "ui\taskroster\img\tr_CreateSupportTask.paa";
 			tooltip = "";
 		};
 		
@@ -487,7 +473,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(12);
 			h = UIH(3.4);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			sizeEx = TXT_CST(0.6);
 			text = "";
@@ -502,7 +488,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(12);
 			h = UIH(0.9);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			size = TXT_S;
 			text = "Select Task";
@@ -526,7 +512,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			rowHeight = UIH(0.7);
 			
 			colorBackground[] = {0,0,1,0.5};
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorSelect[] = {1,1,1,1};
 			colorSelect2[] = {1,1,1,1};
 			colorDisabled[] = {1,1,1,0.5};
@@ -549,7 +535,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			w = UIW(12);
 			h = UIH(0.9);
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			size = TXT_S;
 			text = "Select Team";
@@ -582,7 +568,7 @@ class vn_tr_supportRequest_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x02 + 0x10";	//LEFT "0x10"| Center: "0x02 + 0x10"
 			
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,1,0.0};
 			sizeEx = TXT_S;
 			onButtonClick = "_this#0 ctrlEnable false; call vn_mf_fnc_tr_supportTask_selectPosition;";
@@ -634,7 +620,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = VN_TR_SHEET_L_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_CharacterProfile.paa";
+			text = "ui\taskroster\img\tr_CharacterProfile.paa";
 			tooltip = "";
 		};
 		//////////////////VN_TR_CHARINFO__IDC
@@ -648,7 +634,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "playername";
@@ -667,7 +653,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "serialnumber";
@@ -686,7 +672,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "playerrank";
@@ -705,7 +691,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "curtaskname";
@@ -724,7 +710,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "worldname";
@@ -743,7 +729,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "-1";
@@ -762,7 +748,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			shadow = 0;
 			text = "-1";
@@ -781,7 +767,7 @@ class vn_tr_characterInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			// style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			text = "";
 			size = TXT_M;
@@ -890,7 +876,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa";
+			text = "ui\taskroster\img\icons\vn_icon_task_secondary.paa";
 			tooltip = "";
 		};
 		
@@ -899,7 +885,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			idc = VN_TR_MISSION_MAP_IDC;
 			x = UIX_CR(12.1);
-			y = UIH(17.6);
+			y = UIH(16.4);
 			w = UIW(7.4);
 			h = UIH(6.95);
 			
@@ -907,7 +893,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			type = 101;
 			style = "0x10+ 0x20";
 			colorBackground[] = {0.969,0.957,0.949,1};
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			font = "TahomaB";
 			sizeEx = 0.04;
 			text = "#(argb,8,8,3)color(1,1,1,1)";
@@ -925,9 +911,9 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorText[] = {0.95,0.95,0.95,1};
 			colorBackground[] = {1,1,1,1};
 			
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_1.paa";		//TYPE 1
-			//text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_2.paa";	//TYPE 2
-			//text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_missionsheet_P_M_3.paa";	//TYPE 3
+			text = "ui\taskroster\img\tr_missionsheet_P_M_1.paa";		//TYPE 1
+			//text = "ui\taskroster\img\tr_missionsheet_P_M_2.paa";	//TYPE 2
+			//text = "ui\taskroster\img\tr_missionsheet_P_M_3.paa";	//TYPE 3
 			tooltip = "";
 		};
 		
@@ -940,7 +926,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = UIH(1.8);
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			shadow = 0;
 			text = "Mission Name";
@@ -958,7 +944,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = UIH(3.6);
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			shadow = 0;
 			text = "Mission Description";
@@ -976,7 +962,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = UIH(1);
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {1,0,0,0.0};
 			shadow = 0;
 			text = "";
@@ -996,7 +982,7 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 			colorBackground[] = {0,0,0,0};
 			colorSelectBackground[] = {0.5,0.5,0.5,0.4}; // Selected item fill color
 			colorSelectBackground2[] = {0.5,0.5,0.5,0.4};
-			colorText[] = {0,0,0,1};
+			colorText[] = {1,1,1,1};
 			colorPicture[] = {0,0,0,1};
 			/* sizeEx = TXT_S;
 			rowHeight = UIH(1); */
@@ -1005,18 +991,18 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 		class CoordsText: vn_mf_RscText
 		{
 			idc = VN_TR_MISSIONSHEET_COORDS_IDC;
-			x = UIW(2.25);
-			y = UIH(15.25);
-			w = UIW(8.5);
+			x = UIW(11.5);
+			y = UIH(14.80);
+			w = UIW(4.5);
 			h = UIH(1.1);
 			
 			style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,1.0};
+			colorText[] = {1,1,1,1.0};
 			colorBackground[] = {0.0,0.0,0.0,0.0};
 			shadow = 0;
 			font = "EtelkaMonospacePro";
-			sizeEx = TXT_L;
+			sizeEx = TXT_M;
 			text = "0m";
 			// tooltip = "Coordinates - Format: XXXYYY";
 			tooltip = "Distance to Mission";
@@ -1026,17 +1012,17 @@ class vn_tr_missionInfoPolaroid_base : vn_mf_RscControlsGroupNoScrollbarHV
 		{
 			idc = VN_TR_MISSION_ACTIVATE_IDC;
 			
-			x = UIW(10.25);
-			y = UIH(15.25);
-			w = UIW(8.5);
+			x = UIW(15);
+			y = UIH(14.75);
+			w = UIW(3.5);
 			h = UIH(1.1);
 			
 			sizeEx = TXT_M;
 			
-			colorText[] = {0,0,0,1};
-			colorDisabled[] = {0,0,0,0.0};
+			colorText[] = {1,1,1,1};
+			colorDisabled[] = {0.3,0.3,0.3,0.0};
 			colorBackground[] = {0,0,0,0.02};
-			colorFocused[] = {0,0,0,0.1};
+			colorFocused[] = {1,1,1,0.1};
 			
 			onButtonClick = "call vn_mf_fnc_tr_mission_setActive;";
 			// MouseButtonDown = "";	//No _this param given
@@ -1068,7 +1054,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = VN_TR_SHEET_L_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\tr_mainInfo.paa";
+			text = "ui\taskroster\img\tr_mainInfo.paa";
 			tooltip = "";
 		};
 		
@@ -1083,7 +1069,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			h = UIH(3);
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "\vn\ui_f_vietnam\ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
+			text = "ui\taskroster\img\logos\Logo_MikeForce_HL.paa";
 			tooltip = "";
 		};
 		
@@ -1097,7 +1083,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			
 			// style = "0x10 + 0x0200";
 			
-			colorText[] = {0.1,0.1,0.1,0.9};
+			colorText[] = {1,1,1,0.9};
 			colorBackground[] = {0,0,0,0.0};
 			text = "";
 			size = UIH(1.075);
@@ -1106,7 +1092,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 			{
 				align = "left";
 				valign = "middle";
-				color = "#000000";
+				color = "#FFFFFF";
 				colorLink = "#D09B43";
 				font = USEDFONT;
 				size = 1;
@@ -1129,14 +1115,14 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 					y = 0;
 					w = UIW(14.5);
 					h = UIH(11.5);
-					colorText[] = {0.1,0.1,0.1,0.9};
+					colorText[] = {1,1,1,0.9};
 					text = "";
 					size = TXT_S;
 					tooltip = "";
 					class Attributes
 					{
 						align = "left";
-						color = "#000000";
+						color = "#FFFFFF";
 						colorLink = "#D09B43";
 						font = USEDFONT;
 						size = 1;
@@ -1165,7 +1151,7 @@ class vn_tr_MainInfo_base : vn_mf_RscControlsGroupNoScrollbarHV
 					class Attributes
 					{
 						align = "left";
-						color = "#000000";
+						color = "#FFFFFF";
 						colorLink = "#D09B43";
 						font = USEDFONT;
 						size = 1;

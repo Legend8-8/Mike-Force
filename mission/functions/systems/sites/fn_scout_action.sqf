@@ -95,7 +95,7 @@ private _fnc_siteToDrawableIcon = {
         format ["%1 %2", _text, _distanceText], //Text Content
         1, // Shadow/Outline
         0.05, // Text size
-        "tt2020base_vn", // Font 
+        "RobotoCondensed", // Font 
         "center", // Text Alignment
         false, // Show when off screen 
         0, // Text offset X 

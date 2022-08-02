@@ -73,7 +73,7 @@ class vn_mf_RscStructuredText
 	w = UIW(15.5);
 	h = UIH(0.9);
 	
-	colorText[] = {0.1,0.1,0.1,0.9};
+	colorText[] = {1,1,1,0.9};
 	colorBackground[] = {0,0,0,0};
 	shadow = 0;
 	size = TXT_M;
@@ -339,7 +339,7 @@ class vn_mf_RscButton_ImgSwitch
 	/////////////////// IMPORTANT! DON'T TOUCH OR OVERWRITE! /////////////////////////////////////////////
 
 	color[] = {1,1,1,1};
-	colorText[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
 	colorBackground[] = {0,0,0,1};
 	colorActive[] = {1,1,1,1};
 	colorDisabled[] = {1,1,1,0.25};
@@ -365,8 +365,8 @@ class vn_MyFancyButtonWithChangingTexturesWhenIHoverWithTheMouseOverItCamelCaseI
 	
 	tooltip = "I am a Button who exchanges images, when you move your mouse over me! WOOT WOOT!";
 	
-	text = "\vn\ui_f_vietnam\ui\taskroster\img\papersheetB.paa";
-	textUp = "\vn\ui_f_vietnam\ui\taskroster\img\papersheetC.paa";
+	text = "ui\taskroster\img\papersheetB.paa";
+	textUp = "ui\taskroster\img\papersheetC.paa";
 	
 	onButtonClick = "systemchat str _this;";
 };
@@ -491,15 +491,15 @@ class vn_mf_RscCombo
 	blinkingPeriod = 0; // Time in which control will fade out and back in. Use 0 to disable the effect.
 	
 	
-	colorBackground[] = {0.1,0.1,0.1,0.0}; // Fill color
-	colorSelectBackground[] = {0.1,0.1,0.1,0.1}; // Selected item fill color
+	colorBackground[] = {1,1,1,0.0}; // Fill color
+	colorSelectBackground[] = {1,1,1,0.1}; // Selected item fill color
 	
 	tooltip = ""; // Tooltip text
 	sizeEx =  TXT_M;
 	font = USEDFONT;
 	shadow = 0;
 	
-	colorText[] = {0,0,0,0.75}; // Text and frame color
+	colorText[] = {1,1,1,0.75}; // Text and frame color
 	colorDisabled[] = {1,1,1,0.5}; // Disabled text color
 	colorSelect[] = {0,0,0,1}; // Text selection color
 	
@@ -587,7 +587,7 @@ class vn_mf_RscMapControl
 	
 	onLoad = "(_this#0) ctrlenable false;";
 	
-	colorText[] = {0,0,0,1};
+	colorText[] = {1,1,1,1};
 	// colorBackground[] = {1,1,1,1};
 	
 	shadow = 0;
@@ -618,9 +618,9 @@ class vn_mf_RscMapControl
 	colorCountlines[] = {0.572,0.354,0.188,0.25};
 	colorMainCountlinesWater[] = {0.491,0.577,0.702,0.6};
 	colorCountlinesWater[] = {0.491,0.577,0.702,0.3};
-	colorPowerLines[] = {0.1,0.1,0.1,1.0};
+	colorPowerLines[] = {1,1,1,1.0};
 	colorRailWay[] = {0.8,0.2,0.0,1.0};
-	colorNames[] = {0.1,0.1,0.1,0.9};
+	colorNames[] = {1,1,1,0.9};
 	colorInactive[] = {1.0,1.0,1.0,0.5};
 	colorOutside[] = {0.0,0.0,0.0,1.0};
 	colorTracks[] = {0.84,0.76,0.65,0.15};
@@ -629,8 +629,8 @@ class vn_mf_RscMapControl
 	colorRoadsFill[] = {1.0,1.0,1.0,1.0};
 	colorMainRoads[] = {0.9,0.5,0.3,1.0};
 	colorMainRoadsFill[] = {1.0,0.6,0.4,1.0};
-	colorGrid[] = {0.1,0.1,0.1,0.6};
-	colorGridMap[] = {0.1,0.1,0.1,0.6};
+	colorGrid[] = {1,1,1,0.6};
+	colorGridMap[] = {1,1,1,0.6};
 	colorTrails[] = {0.84,0.76,0.65,0.15};
 	colorTrailsFill[] = {0.84,0.76,0.65,0.65};
 	widthRailWay = 4.0;
@@ -671,7 +671,7 @@ class vn_mf_RscMapControl
 		font = "RobotoCondensed";
 		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 		colorBackground[] = {1,1,1,0.5};
-		color[] = {0,0,0,1};
+		color[] = {1,1,1,1};
 	};
 	class Task
 	{
@@ -738,7 +738,7 @@ class vn_mf_RscMapControl
 	class Rock
 	{
 		icon = "\A3\ui_f\data\map\mapcontrol\rock_ca.paa";
-		color[] = {0.1,0.1,0.1,0.8};
+		color[] = {1,1,1,0.8};
 		size = 12;
 		importance = "0.5 * 12 * 0.05";
 		coefMin = 0.25;

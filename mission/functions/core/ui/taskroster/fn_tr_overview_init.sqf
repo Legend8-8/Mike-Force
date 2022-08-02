@@ -76,7 +76,7 @@ if(!isNull _task)then
 		_x setVariable ["activeZone",""];
 		_x setVariable ["selectedZone",""];
 		_x ctrlSetEventhandler ["buttonClick",""];
-		_x ctrlSetTextColor [0,0,0,0];
+		_x ctrlSetTextColor [1,1,1,0];
 	}else{
 		private _curZoneData = vn_mf_activeZones#_forEachIndex;
 		private _markerText = markerText _curZoneData;
@@ -88,9 +88,9 @@ if(!isNull _task)then
 		
 		if(vn_mf_tr_zone_filter isEqualTo _curZoneData)then
 		{
-			_x ctrlSetTextColor [0,0,0,1];
+			_x ctrlSetTextColor [1,1,1,1];
 		}else{
-			_x ctrlSetTextColor [0,0,0,0.2];
+			_x ctrlSetTextColor [1,1,1,0.2];
 		};
 	};
 }forEach[VN_TR_ZONE_A_CTRL, VN_TR_ZONE_B_CTRL];
