@@ -144,11 +144,11 @@ class GreenHornets
     onLeave = "";
 };
 
-class 71stMEU
+class 3rdMEU
 {
-    name = "Gunslingers [71st MEU]";
-    icon = "custom\taskroster\71stmeu_HL.paa";
-    shortname = "Gunslingers";
+    name = "3rd Marines [3rd MEU]";
+    icon = "custom\taskroster\3rdmeu_HL.paa";
+    shortname = "3rd Marines";
     unit = "vn_b_men_army_01";
     color = "ColorBlue";
     colorRGBA[] = {0, 0.3, 0.6, 1};
@@ -216,11 +216,11 @@ class MilitaryPolice
     onLeave = "";
 };
 
-class BlackHawk
+class QuarterHorse
 {
-    name = "Black Hawk [1st Squadron, 1st Cav]";
-    icon = "custom\taskroster\blackhawk_HL.paa";
-    shortname = "Black Hawk";
+    name = "Quarter Horse [1st Squadron, 4th Cav]";
+    icon = "custom\taskroster\quarterhorse_HL.paa";
+    shortname = "Quarter Horse";
     unit = "vn_b_men_army_01";
     color = "ColorOrange";
     colorRGBA[] = {0.85, 0.4, 0, 1};
@@ -280,7 +280,8 @@ class Frogmen
         UAVHacker = false;
         vn_artillery = false;
         harassable = true;
-        scout = false;
+        scout = true;
+        scout_multiple = true;
     };
 
     //Function Calls on team Join

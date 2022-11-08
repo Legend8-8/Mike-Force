@@ -17,20 +17,21 @@ params ["_target", "_player"];
 
 if !(isPlayer _target) exitWith {};
 
-removeAllWeapons _target;
-removeAllAssignedItems _target;
-removeAllItems _target;
-removeAllContainers _target;
-removeGoggles _target;
-removeHeadgear _target;
-
-{removeAllWeapons player; } remoteExec ["call", _target];
-
-_target forceAddUniform (selectRandom ["vn_o_uniform_nva_army_01_02","vn_o_uniform_nva_army_02_01","vn_o_uniform_nva_army_01_01","vn_o_uniform_nva_army_03_02","vn_o_uniform_nva_army_02_02","vn_o_uniform_nva_army_03_01"]);
-_target addItem "FirstAidKit";
-_target addItem "FirstAidKit";
-_target addItem "FirstAidKit";
-_target addItem "FirstAidKit";
+{
+	removeAllAssignedItems player;
+	removeAllItems player;
+	removeGoggles player;
+	removeHeadgear player;
+	removeAllWeapons player;
+	removeVest player;
+	removeBackpack player;
+	//temporarily moved aside player forceAddUniform "vn_o_uniform_nva_army_01_01" (selectRandom ["vn_b_uniform_macv_01_01","vn_b_uniform_macv_01_02","vn_b_uniform_macv_01_03","vn_b_uniform_macv_01_04","vn_b_uniform_macv_01_05","vn_b_uniform_macv_01_06"])
+	player addItem "vn_o_item_firstaidkit";
+	player addItem "vn_o_item_firstaidkit";
+	player addItem "vn_o_item_firstaidkit";
+	player addItem "vn_o_item_firstaidkit";
+	
+} remoteExec ["call", _target];
 
 private _message = format ["%1 has captured %2!", name _player, name _target];
 private _nearbyCages = nearestObjects [getPos _target, ["Logic"], 10, false];

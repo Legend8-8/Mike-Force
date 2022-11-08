@@ -20,12 +20,12 @@
 
 params ["_player", "_target"];
 
-if (isNil "_target") exitWith { _result };
+private _playerSide = _player getVariable ["vn_mf_side", independent];
+private _targetTeam = _target getVariable ["vn_mf_side", independent];
 
-private _playerSide = _player getVariable "vn_mf_side";
-private _targetSide = _target getVariable "vn_mf_side";
+if (_playerSide != _targetTeam) exitWith
+{
+	false
+};
 
-if (isNil "_targetSide") exitwith { false };
-if (_playerSide == _targetSide) exitWith { true };
-
-false
+true

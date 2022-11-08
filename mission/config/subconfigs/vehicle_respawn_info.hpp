@@ -70,7 +70,6 @@ class vn_b_wheeled_m54_mg_03 : wreck_short {};
 
 //Armoured Cars
 class vn_b_armor_m41_01_01 : wreck_long {};
-class vn_o_armor_type63_01 : wreck_long {};
 
 //APC
 class vn_b_armor_m113_01 : respawn_medium {};
@@ -88,11 +87,14 @@ class vn_c_boat_02_01 : respawn_short {};
 //US Boats
 class vn_b_boat_05_01 : respawn_long {};
 class vn_b_boat_06_01 : respawn_long {};
+class vn_b_boat_06_02 : respawn_long {};
 class vn_b_boat_09_01 : respawn_medium {};
 class vn_b_boat_10_01 : respawn_medium {};
 class vn_b_boat_11_01 : respawn_medium {};
 class vn_b_boat_12_01 : respawn_medium {};
+class vn_b_boat_12_02 : respawn_medium {};
 class vn_b_boat_13_01 : respawn_medium {};
+class vn_b_boat_13_02 : respawn_medium {};
 
 //Air assets
 //Cobra Helicopter
@@ -128,7 +130,7 @@ class vn_b_air_ch34_04_03 : wreck_medium {};
 class vn_b_air_ch34_04_04 : wreck_medium {};
 
 //Littlebird
-class C_Heli_Light_01_civil_F : respawn_short {};
+class B_Heli_Light_01_F : respawn_short {};
 class vn_b_air_oh6a_01 : respawn_short {};
 class vn_b_air_oh6a_02 : wreck_medium {};
 class vn_b_air_oh6a_03 : wreck_medium {};
@@ -209,17 +211,22 @@ class vn_b_air_uh1c_06_02 : wreck_medium {};
 
 //UH1B - Slick
 class vn_b_air_uh1c_07_01 : respawn_medium {};
+class vn_b_air_uh1c_07_02 : respawn_medium {};
 
 //UH1E - Heavy Gunship
 class vn_b_air_uh1e_02_04 : wreck_medium {};
+class vn_b_air_uh1e_01_04 : wreck_medium {};
+
+//UH1E - Slick
+class vn_b_air_uh1e_03_04 : respawn_medium {};
 
 //UH1F - Slick
 class vn_b_air_uh1f_01_03 : respawn_medium {};
 
 //CH43 - Heavy Transport
-class vn_i_air_ch34_01_02 : wreck_medium {};
-class vn_i_air_ch34_02_01 : wreck_medium {};
-class vn_i_air_ch34_02_02 : wreck_medium {};
+class vn_i_air_ch34_01_02 : respawn_medium {};
+class vn_i_air_ch34_02_01 : respawn_medium {};
+class vn_i_air_ch34_02_02 : respawn_medium {};
 
 class vn_b_air_f100d_cap : wreck_long {};
 class vn_b_air_f100d_cas : wreck_long {};
@@ -319,3 +326,86 @@ class uns_willys_2_usmp : respawn_short {};
 class uns_willys_2_usmc : respawn_short {};
 class uns_willys_2_m60 : respawn_short {};
 class uns_willys_2_m1919 : respawn_short {};
+
+//Stuff forgotten
+class vn_b_air_uh1c_07_07 : respawn_short {};
+class vn_b_air_uh1b_01_03 : respawn_short {};
+
+
+//Dac Cong
+class vn_o_air_mig19_cap : respawn_short {};
+class vn_o_air_mi2_01_03 : respawn_short {};
+class vn_o_armor_type63_01 : respawn_short {};
+class vn_o_wheeled_btr40_mg_03 : respawn_short {};
+class vn_o_nva_static_d44 : respawn_short {};
+class vn_o_wheeled_btr40_mg_02 : respawn_short {};
+class vn_o_wheeled_btr40_mg_01 : respawn_short {};
+class vn_o_wheeled_z157_ammo : respawn_short {};
+class vn_o_air_mi2_01_02 : respawn_short {};
+class vn_o_air_mi2_01_01 : respawn_short {};
+class vn_o_nva_65_static_zpu4 : respawn_short {};
+class vn_o_nva_65_static_sgm_high_01 : respawn_short {};
+class vn_o_nva_static_rpd_high : respawn_short {};
+class vn_o_nva_65_static_pk_high : respawn_short {};
+class vn_o_pl_static_dshkm_high_02 : respawn_short {};
+class vn_o_nva_65_static_dshkm_high_01 : respawn_short {};
+class vn_o_pl_static_mg42_high : respawn_short {};
+class vn_o_nva_65_static_dshkm_low_01 : respawn_short {};
+class vn_o_nva_65_static_dshkm_low_02 : respawn_short {};
+class vn_o_pl_static_mg42_low : respawn_short {};
+class vn_o_nva_static_pk_low : respawn_short {};
+class vn_o_nva_static_sgm_low_02 : respawn_short {};
+class vn_o_nva_static_sgm_low_01 : respawn_short {};
+class vn_o_wheeled_btr40_mg_03_nva65 : respawn_short {};
+class vn_o_wheeled_btr40_01_nva65 : respawn_short {};
+class vn_o_wheeled_btr40_02_nva65 : respawn_short {};
+class vn_o_nva_static_h12 : respawn_short {};
+class vn_o_nva_static_mortar_type63 : respawn_short {};
+class vn_o_nva_65_static_d44 : respawn_short {};
+class vn_o_wheeled_z157_mg_01_nva65 : respawn_short {};
+class vn_o_wheeled_btr40_mg_02_nva65 : respawn_short {};
+class vn_o_wheeled_btr40_mg_01_nva65 : respawn_short {};
+class vn_o_wheeled_z157_03_nva65 : respawn_short {};
+class vn_o_wheeled_z157_mg_02_nva65 : respawn_short {};
+class vn_o_wheeled_z157_01_nva65 : respawn_short {};
+class vn_o_wheeled_z157_02_nva65 : respawn_short {};
+class vn_o_armor_m113_acav_03 : respawn_short {};
+class vn_o_armor_m113_acav_01 : respawn_short {};
+class vn_o_armor_m113_01 : respawn_short {};
+class vn_o_wheeled_z157_ammo_nva65 : respawn_short {};
+class vn_o_wheeled_z157_fuel_nva65 : respawn_short {};
+class vn_o_wheeled_z157_repair_nva65 : respawn_short {};
+class vn_o_armor_m41_01 : respawn_short {};
+class vn_o_armor_pt76a_01 : respawn_short {};
+class vn_o_armor_pt76b_01 : respawn_short {};
+class vn_o_air_mi2_04_03 : respawn_short {};
+class vn_o_air_mi2_05_05 : respawn_short {};
+class vn_o_air_mi2_04_06 : respawn_short {};
+class vn_o_air_mi2_04_05 : respawn_short {};
+class vn_o_air_mi2_04_04 : respawn_short {};
+class vn_o_air_mi2_05_02 : respawn_short {};
+class vn_o_air_mi2_05_01 : respawn_short {};
+class vn_o_air_mi2_05_06 : respawn_short {};
+class vn_o_boat_03_02 : respawn_short {};
+class vn_o_boat_04_02 : respawn_short {};
+class vn_o_nva_navy_static_d44 : respawn_short {};
+class vn_o_nva_static_zpu4 : respawn_short {};
+class vn_o_wheeled_z157_04 : respawn_short {};
+class vn_o_wheeled_z157_mg_02_vcmf : respawn_short {};
+class vn_o_armor_pt76a_01_pl : respawn_short {};
+class vn_o_wheeled_z157_03_vcmf : respawn_short {};
+class vn_c_wheeled_m151_01 : respawn_short {};
+class vn_c_wheeled_m151_02 : respawn_short {};
+class vn_o_armor_m41_02_vcmf : respawn_short {};
+class vn_o_nva_navy_static_rpd_high : respawn_short {};
+class vn_o_nva_navy_static_dshkm_high_01 : respawn_short {};
+class vn_o_pl_static_mortar_type53 : respawn_short {};
+class vn_o_nva_navy_static_pk_high : respawn_short {};
+class vn_o_nva_navy_static_pk_low : respawn_short {};
+class vn_o_nva_navy_static_dshkm_low_01 : respawn_short {};
+class vn_o_nva_static_type56rr : respawn_short {};
+class vn_o_nva_navy_static_dshkm_low_02 : respawn_short {};
+class vn_o_nva_navy_static_at3 : respawn_short {};
+class vn_o_air_mi2_03_03 : respawn_short {};
+class vn_o_air_mi2_03_05 : respawn_short {};
+class vn_o_air_mi2_03_04 : respawn_short {};

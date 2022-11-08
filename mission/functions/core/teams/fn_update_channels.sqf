@@ -61,7 +61,7 @@ switch(_team) do
 		7 enableChannel [true, true];
 	};
 
-	case "71stMEU" : {
+	case "3rdMEU" : {
 		1 radioChannelAdd [player];
 
 		6 enableChannel [true, true];
@@ -73,7 +73,7 @@ switch(_team) do
 		6 enableChannel [true, true];
 	};
 
-	case "BlackHawk" : {
+	case "QuarterHorse" : {
 		1 radioChannelAdd [player];
 		3 radioChannelAdd [player];
 

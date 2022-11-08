@@ -40,11 +40,11 @@ player createDiaryRecord ["Diary", [localize "STR_vn_mf_other_keys", localize "S
 call para_g_fnc_event_subsystem_init;
 
 // display initial loading text
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading1"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading1"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.1;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading2"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading2"]] call vn_mf_fnc_update_loading_screen;
 
 //Read pow cage locations and populate arrays 
 call vn_mf_fnc_pow_init;
@@ -53,65 +53,65 @@ uiSleep 0.4;
 progressLoadingScreen 0.2;
 // add display event handlers
 call para_c_fnc_init_display_event_handler;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading3"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading3"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.3;
 // add player event handlers
 call para_c_fnc_init_player_event_handlers;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading4"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading4"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.4;
 
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading6"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading6"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.42;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading7"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading7"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.44;
 
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading8"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading8"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.46;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading9"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.48;
 
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.5;
 
 ["action_manager", vn_mf_fnc_action_init, [], 5] call para_g_fnc_scheduler_add_job;
 
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading11"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading11"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.6;
 // Set up arsenal clean up trash cans.
 call vn_mf_fnc_arsenal_trash_cleanup_init;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading12"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading12"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.7;
 // create UI
 0 spawn vn_mf_fnc_ui_create;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading13"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading13"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.8;
 // master loop
 0 spawn para_c_fnc_compiled_loop_init;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading14"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading14"]] call vn_mf_fnc_update_loading_screen;
 
 uiSleep 0.4;
 progressLoadingScreen 0.9;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading17"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading17"]] call vn_mf_fnc_update_loading_screen;
 
 private _lastTeamName = player getVariable ["vn_mf_db_player_group", "MikeForce"];
 
@@ -121,7 +121,7 @@ if (side player == east) then
 	_respawnMarker = format ["mf_dc_respawn_%1", _lastTeamName]; 
 };
 
-if (_lastTeamName == "SatansAngels") then {
+if (_lastTeamName == "SatansAngels" && toLower(worldName) in ["cam_lao_nam"]) then {
 	player setPosATL [20152.6,67.6535,123.54];
 } else {
 	player setPos getMarkerPos _respawnMarker;
@@ -135,7 +135,7 @@ call vn_mf_fnc_action_teleport;
 call vn_mf_fnc_apply_unit_traits;
 
 call vn_mf_fnc_action_trait;
-[parseText format["<t font='RobotoCondensed' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
+[parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading10"]] call vn_mf_fnc_update_loading_screen;
 
 // apply health effects
 call vn_mf_fnc_health_effects;
@@ -172,13 +172,15 @@ vn_mf_default_awards = [];
 // initialize tools controller
 call para_c_fnc_tool_controller_init;
 
+//call vn_mf_fnc_admin_arsenal;
+
 // This is used for showing values of food and water in the arsenal
 call vn_mf_fnc_enable_arsenal_food_drink_overlay;
 
 //LOADING COMPLETE
 //Start tidying up ready for play.
 
-enableEnvironment false;
+enableEnvironment [false, true];
 
 // end loading screen
 uiSleep 0.4;
@@ -210,6 +212,8 @@ else{
 		case 3: {setStaminaScheme "Exhausted"};
 	};
 };
+
+"vn_holdActionAdd_layer" cutText ["","PLAIN"];
 
 // display location after a little delay
 sleep 4;

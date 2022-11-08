@@ -121,6 +121,7 @@ class AmmoCrateExplosives
 		{"vn_40mm_m406_he_mag",20},
 		{"vn_40mm_m433_hedp_mag",20},
 		{"vn_40mm_m576_buck_mag",20},
+		{"vn_m72_mag", 20},
 		{"vn_40mm_m583_flare_w_mag",20},
 		{"vn_40mm_m661_flare_g_mag",20},
 		{"vn_40mm_m662_flare_r_mag",20},
@@ -150,6 +151,15 @@ class AmmoCrateExplosives
 class FoodCrate
 {
 	objectClassname = "vn_b_ammobox_supply_02";
+	weapons[] = {};
+	magazines[] = {};
+	items[] = {};
+	backpacks[] = {};
+};
+
+class EmptySupplyCrate
+{
+	objectClassname = "vn_b_ammobox_supply_01";
 	weapons[] = {};
 	magazines[] = {};
 	items[] = {};

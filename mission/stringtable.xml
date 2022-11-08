@@ -192,7 +192,7 @@
         <Original>Disabled</Original>
       </Key>
       <Key ID="STR_vn_mf_vehicle_locked_to_team">
-        <Original>This vehicle can't be used by your team</Original>
+        <Original>This vehicle slot can't be used by your team.</Original>
       </Key>
       <Key ID="STR_vn_mf_respawn_mike_force">
         <Original>PLEI MEI SF CAMP - MIKE FORCE</Original>
@@ -242,6 +242,9 @@
 	    <Key ID="STR_vn_mf_respawn_satansangels">
         <Original>SATANS ANGELS</Original>
       </Key>
+      <Key ID="STR_vn_mf_respawn_satansangels_landhangars">
+        <Original>SATANS ANGELS</Original>
+      </Key>
 	    <Key ID="STR_vn_mf_respawn_presscorp">
         <Original>PRESS CORP</Original>
       </Key>
@@ -260,11 +263,11 @@
       <Key ID="STR_vn_mf_respawn_7thcav">
         <Original>GARRYOWEN</Original>
       </Key>
-	    <Key ID="STR_vn_mf_respawn_71stmeu">
-        <Original>GUNSLINGERS</Original>
+	    <Key ID="STR_vn_mf_respawn_3rdmeu">
+        <Original>3RD MEU</Original>
       </Key>
-	    <Key ID="STR_vn_mf_respawn_blackhawk">
-        <Original>BLACK HAWK</Original>
+	    <Key ID="STR_vn_mf_respawn_quarterhorse">
+        <Original>QUARTER HORSE</Original>
       </Key>
 	    <Key ID="STR_vn_mf_respawn_muskets">
         <Original>MUSKETS</Original>
@@ -1271,6 +1274,9 @@
     <Container name="supplies">
       <Key ID="STR_vn_mf_light_ammo_supplies">
         <Original>Light Ammo Supplies</Original>
+      </Key>
+      <Key ID="STR_vn_mf_empty_supply_crate">
+        <Original>Empty Supply Crate</Original>
       </Key>
       <Key ID="STR_vn_mf_support_ammo_supplies">
         <Original>Support Ammo Supplies</Original>

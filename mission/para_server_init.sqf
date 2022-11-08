@@ -18,12 +18,16 @@
 */
 
 call vn_mf_fnc_server_init_backend;
+["restart_messages", vn_mf_fnc_server_process_restart, [], 60] call para_g_fnc_scheduler_add_job;
 
 call para_s_fnc_init_whitelist;
 ["update_whitelist", para_s_fnc_init_whitelist, [], 120] call para_g_fnc_scheduler_add_job;
 
 call para_s_fnc_init_curators;
 ["update_curators", para_s_fnc_init_curators, [], 300] call para_g_fnc_scheduler_add_job;
+
+call para_s_fnc_init_dopamine;
+["dopamine_hit", para_s_fnc_init_dopamine, [], 300] call para_g_fnc_scheduler_add_job;
 
 private _gamemode_config = (missionConfigFile >> "gamemode");
 
@@ -52,7 +56,7 @@ vn_mf_duskLength = ["dusk_length", 1200] call BIS_fnc_getParamValue;
 vn_mf_nightLength = ["night_length", 1800] call BIS_fnc_getParamValue;
 
 //Set whether stamia is enabled
-vn_mf_param_enable_stamina = (["param_enable_stamina", 1] call BIS_fnc_getParamValue) > 0;
+vn_mf_param_enable_stamina = (["param_enable_stamina", 0] call BIS_fnc_getParamValue) > 0;
 vn_mf_param_set_stamina = (["param_set_stamina", 1] call BIS_fnc_getParamValue);
 publicVariable "vn_mf_param_enable_stamina";
 publicVariable "vn_mf_param_set_stamina";
@@ -106,7 +110,7 @@ vn_site_objects = [];
 // Set desired number of simultaneously active zones.
 vn_mf_targetNumberOfActiveZones = 1;
 // Set number of enemies per player.
-para_g_enemiesPerPlayer = 2;
+para_g_enemiesPerPlayer = 5;
 //Global variable, so it needs syncing across the network.
 publicVariable "para_g_enemiesPerPlayer";
 
@@ -281,7 +285,7 @@ diag_log "VN MikeForce: Initialising Loadbalancer";
 diag_log "VN MikeForce: Initialising AI Objectives";
 // start ai subsystem. Depends on the load balancer subsystem.
 [
-    ["hardAiLimit", ["hard_ai_limit", 80] call BIS_fnc_getParamValue]
+    ["hardAiLimit", ["hard_ai_limit", 140] call BIS_fnc_getParamValue]
 ] call para_s_fnc_ai_obj_subsystem_init;
 
 diag_log "VN MikeForce: Initialising Harass";
