@@ -75,7 +75,7 @@ vn_tr_taskList = [];
 			case "PRI":	{[0, "ui\taskroster\img\icons\vn_icon_task_primary.paa"]};
 			case "SEC":	{[50, "ui\taskroster\img\icons\vn_icon_task_secondary.paa"]};
 			case "SUP":	{[100, "ui\taskroster\img\icons\vn_icon_task_support.paa"]};
-			default {[1, "Vn\ui_f_vietnam\ui\debrief\sticky.paa"]};
+			default {[1, ""]};
 		};
 		private _orderValue = (_typeData#0)+_forEachIndex;
 		_ctrlSupportTasks lnbSetValue					[ [_lnbindex, 0],	_orderValue];	//order value - used for sorting by Mission Type

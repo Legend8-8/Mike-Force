@@ -4,14 +4,14 @@
 class vn_tr_cordels: vn_mf_RscPicture
 {
 	idc = -1;
-	x = VN_TR_CORDLES_X;
-	y = VN_TR_CORDLES_Y;
-	w = VN_TR_CORDLES_W;
-	h = VN_TR_CORDLES_H;
+	x = VN_TR_FOLDER_X;
+	y = VN_TR_FOLDER_Y;
+	w = VN_TR_FOLDER_W;
+	h = VN_TR_FOLDER_H;
 	
 	colorText[] = {1,1,1,1};
 	colorBackground[] = {1,1,1,1};
-	text = "ui\taskroster\img\tr_folder_cordels.paa";
+	text = "ui\taskroster\img\tr_pda_dirt.paa";
 	tooltip = "";
 	onLoad = "(_this#0) ctrlenable false;";
 };

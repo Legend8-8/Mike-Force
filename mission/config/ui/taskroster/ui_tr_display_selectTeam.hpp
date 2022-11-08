@@ -15,7 +15,7 @@ class vn_tr_disp_selectTeam
 	
 	class ControlsBackground
 	{
-		class folderBackground: vn_mf_RscPicture
+		class pdaBackground: vn_mf_RscPicture
 		{
 			idc = -1;
 			x = VN_TR_FOLDER_X;
@@ -24,7 +24,7 @@ class vn_tr_disp_selectTeam
 			h = VN_TR_FOLDER_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "ui\taskroster\img\tr_folder_background_sheetL.paa";
+			text = "ui\taskroster\img\tr_pda.paa";
 		};
 	};
 	

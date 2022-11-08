@@ -25,7 +25,7 @@
 	supply_capacity = capacity; \
 	supply_consumption = __EVAL(capacity / lifetime)
 
-class Land_vn_guardhouse_01
+class Land_ConnectorTent_01_NATO_tropic_open_F
 {
 	name = "STR_vn_mf_checkpoint";
 	type = "checkpoints";
@@ -45,15 +45,15 @@ class Land_vn_guardhouse_01
 	{
 		class initial_state
 		{
-			object_class = "vn_guardhouse_01_part0";
+			object_class = "Land_TentSolar_01_folded_olive_F";
 		};
 		class middle_state
 		{
-			object_class = "vn_guardhouse_01_part1";
+			object_class = "Land_TentSolar_01_folded_olive_F";
 		};
 		class final_state
 		{
-			object_class = "Land_vn_guardhouse_01";
+			object_class = "Land_ConnectorTent_01_NATO_tropic_open_F";
 		};
 	};
 

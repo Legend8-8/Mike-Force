@@ -1274,7 +1274,7 @@ class MikeForce_loadingScreen
 		{
 			idc = 5002;
 			style = 48 + 0x800;
-			text="\vn\objects_f_vietnam\civ\signs\data\billboards\vn_ui_billboard_01_ca.paa";
+			text="custom\loadingscreens\bronation_banner.paa";
 			colorText[] = {1,1,1,0.8};
 			x = "safezoneX";
 			y = "safezoneY";

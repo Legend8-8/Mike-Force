@@ -20,7 +20,7 @@ class vn_tr_disp_taskRoster_Main
 		{
 			idc = -1;
 		};
-		class folderBackground: vn_mf_RscPicture
+		class pdaBackground: vn_mf_RscPicture
 		{
 			idc = -1;
 			x = VN_TR_FOLDER_X;
@@ -29,7 +29,7 @@ class vn_tr_disp_taskRoster_Main
 			h = VN_TR_FOLDER_H;
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {1,1,1,1};
-			text = "ui\taskroster\img\tr_folder_background_sheetL.paa";
+			text = "ui\taskroster\img\tr_pda.paa";
 			tooltip = "";
 		};
 		
@@ -292,7 +292,7 @@ class vn_tr_disp_taskRoster_Main
 		class mutecomms: vn_mf_RscText
 		{
 			idc = VN_TR_CHARINFO_RANK_IDC;
-			x = UIW(-4);
+			x = UIW(-3.3);
 			y = UIH(0.25);
 			w = UIW(3);
 			h = UIH(0.65);
@@ -311,7 +311,7 @@ class vn_tr_disp_taskRoster_Main
 		class ccmf_btn: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_CCMF_BTN_IDC;
-			x = UIW(-3);
+			x = UIW(-2.30);
 			y = UIH(1);
 			w = UIW(1);
 			h = UIH(1);
@@ -323,7 +323,7 @@ class vn_tr_disp_taskRoster_Main
 		class ccmfoff_btn: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_CCMFOFF_BTN_IDC;
-			x = UIW(-4.21);
+			x = UIW(-3.51);
 			y = UIH(1);
 			w = UIW(1);
 			h = UIH(1);
@@ -335,7 +335,7 @@ class vn_tr_disp_taskRoster_Main
 		class ccac_btn: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_CCAC_BTN_IDC;
-			x = UIW(-3);
+			x = UIW(-2.3);
 			y = UIH(2.5);
 			w = UIW(1);
 			h = UIH(1);
@@ -347,7 +347,7 @@ class vn_tr_disp_taskRoster_Main
 		class ccacoff_btn: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_CCACOFF_BTN_IDC;
-			x = UIW(-4.21);
+			x = UIW(-3.51);
 			y = UIH(2.5);
 			w = UIW(1);
 			h = UIH(1);
@@ -359,7 +359,7 @@ class vn_tr_disp_taskRoster_Main
 		class ccgh_btn: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_CCGH_BTN_IDC;
-			x = UIW(-3);
+			x = UIW(-2.3);
 			y = UIH(4);
 			w = UIW(1);
 			h = UIH(1);
@@ -371,7 +371,7 @@ class vn_tr_disp_taskRoster_Main
 		class ccghoff_btn: vn_mf_RscButton_ImgSwitch
 		{
 			idc = VN_TR_CCGHOFF_BTN_IDC;
-			x = UIW(-4.21);
+			x = UIW(-3.51);
 			y = UIH(4);
 			w = UIW(1);
 			h = UIH(1);

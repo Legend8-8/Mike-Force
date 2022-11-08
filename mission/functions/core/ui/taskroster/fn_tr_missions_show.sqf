@@ -56,13 +56,8 @@ private _missionPage_main_background_image = VN_TR_MISSIONLIST_CTRL lnbData [_li
 //if "new" -> Assign a background img to the selected index (will be reassigned/redone, when the player reopens the TaskRoster, so it's just an "eye gimmick")
 if(_missionPage_main_background_image isEqualTo "")then
 {
-	_missionPage_main_background_image = selectRandom [
-		"ui\taskroster\img\tr_missionsheet_P_M_1.paa",
-		"ui\taskroster\img\tr_missionsheet_P_M_2.paa",
-		"ui\taskroster\img\tr_missionsheet_P_M_3.paa"
-	];
 	//set the Bg Img as fixed, as long as the TR is openend
-	VN_TR_MISSIONLIST_CTRL lnbSetData [[_list_index, 0], _missionPage_main_background_image];
+	VN_TR_MISSIONLIST_CTRL lnbSetData [[_list_index, 0], "ui\taskroster\img\tr_missionsheet_P_M_1.paa"];
 };
 VN_TR_MISSIONSHEET_IMG_CTRL ctrlSetText _missionPage_main_background_image;
 VN_TR_MISSIONSHEET_TASKS_CTRL ctrlSetStructuredText parseText "Tasks:";

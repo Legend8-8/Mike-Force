@@ -8,7 +8,7 @@ class EditorData
 	toggles=1545;
 	class ItemIDProvider
 	{
-		nextID=1416;
+		nextID=1424;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=557;
+		nextID=574;
 	};
 	class Camera
 	{
-		pos[]={14522.813,41.447628,5838.2744};
-		dir[]={-0.51106268,-0.84464145,0.15936038};
-		up[]={-0.80634892,0.53533238,0.25143701};
-		aside[]={0.29768491,0,0.95466411};
+		pos[]={14448.708,259.68555,16009.536};
+		dir[]={-0.71773231,-0.5259316,-0.45635104};
+		up[]={-0.44381678,0.85052687,-0.2821891};
+		aside[]={-0.536551,-1.4901161e-008,0.8438679};
 	};
 };
 binarizationWanted=0;
@@ -252,7 +252,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=26;
+		items=27;
 		class Item0
 		{
 			dataType="Layer";
@@ -2216,7 +2216,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={26741.174,22.453527,24611.926};
+						position[]={26760.289,23.131521,24623.029};
 						angles[]={0,2.2359762,0};
 					};
 					side="Empty";
@@ -2227,6 +2227,7 @@ class Mission
 					};
 					id=313;
 					type="Land_Billboard_03_aan_F";
+					atlOffset=5.9127808e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6200,6 +6201,23 @@ class Mission
 			};
 			id=1384;
 			atlOffset=0.00015354156;
+		};
+		class Item26
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={26606.859,20.866463,24193.543};
+				angles[]={0,5.3339233,-0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=1422;
+			type="Land_New_WiredFence_10m_F";
+			atlOffset=-7.6293945e-005;
 		};
 	};
 };

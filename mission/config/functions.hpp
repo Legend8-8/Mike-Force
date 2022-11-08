@@ -159,6 +159,7 @@ class CfgFunctions
 			class action_destroy_respawn {};
 			class action_destroy_task {};
 			class action_gather_intel {};
+			class action_finish_building {};
 			class action_capture_player {};
 			class action_drink_water {};
 			class action_eat_food {};
