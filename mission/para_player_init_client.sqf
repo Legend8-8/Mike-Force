@@ -89,11 +89,14 @@ call vn_mf_fnc_active_init;
 uiSleep 0.4;
 progressLoadingScreen 0.5;
 
+/*
+@dijksterhuis disabled for curator events
 // @dijksterhuis: we should only need to call this once? -- when the player joins?
 // only reason to keep adding actions after attach to player would be if the actions
 // are removed from player object.
-call vn_mf_fnc_action_init;
+// call vn_mf_fnc_action_init;
 // ["action_manager", vn_mf_fnc_action_init, [], 5] call para_g_fnc_scheduler_add_job;
+*/
 
 [parseText format["<t font='tt2020base_vn' color='#F5F2D0'>%1</t>",localize "STR_vn_mf_loading11"]] call vn_mf_fnc_update_loading_screen;
 
@@ -155,10 +158,13 @@ if (_useMarkers) then {
 // Initalize marker info UI
 [] call para_c_fnc_zone_marker_init;
 
+/*
+@dijksterhuis disabled for curator events
 // Start AI processing for local player, if we're not a LAN server (as then serverside processing will kick in)
 if (!isServer) then {
 	call para_g_fnc_ai_create_behaviour_execution_loop;
 };
+*/
 
 // Set up automatic view distance scaling for performance
 [] call para_c_fnc_perf_enable_dynamic_view_distance;
@@ -250,9 +256,13 @@ call vn_mf_fnc_display_location_time;
 	};
 };
 
+/*
+@dijksterhuis disabled for curator events
 // Marker Discovery
 // @dijksterhuis: Disabled in favour of radio wiretap feature.
 // [] call vn_mf_fnc_sites_subsystem_client_init;
+[] call vn_mf_fnc_sites_subsystem_client_init;
+*/
 
 // Tutorial System
 [] call vn_mf_fnc_tutorial_subsystem_client_init;

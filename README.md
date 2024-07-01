@@ -1,4 +1,16 @@
-# README
+# MIKE FORCE: BRO-NATION EVENTS EDITION
+
+This is a minimal Mike FOrce build retaining core features and functionality for event sheld on Bro-Nation servers.
+
+## Usage (Curation team)
+
+1. Go to the [Releases](https://github.com/Bro_Nation/bn-mf-events/releases) tab (right hand side of the screen) and find the release with the "Latest" tag on it.
+2. Download the `.zip` file with a name tat starts with `AllMPMissions_`
+3. Copy the Downloaded Zip file to your Arma 3 profile folder.
+4. Extract allthe contents of your Zip file. You should end up with 4 folders for each map, prefixed by `bn_mikeforce_events`
+5. Start editing your mission!
+
+----
 
 ## IMPORTANT LICENSING INFORMATION
 
