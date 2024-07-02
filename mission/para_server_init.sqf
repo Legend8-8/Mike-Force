@@ -354,6 +354,9 @@ diag_log "VN MikeForce: Initialising Gameplay Director";
 
 */
 
+// @dijksterhuis: added for curation
+vn_mf_markers_zones apply {deleteMarker _x};
+
 diag_log "VN MikeForce: Initialising Safe Zones";
 [] call vn_mf_fnc_arsenal_safe_zones_init;
 

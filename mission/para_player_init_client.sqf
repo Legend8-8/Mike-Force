@@ -155,8 +155,11 @@ if (_useMarkers) then {
 	call vn_mf_fnc_player_markers_subsystem_init;
 };
 
+/*
+@dijksterhuis disabled for curator events
 // Initalize marker info UI
 [] call para_c_fnc_zone_marker_init;
+*/
 
 /*
 @dijksterhuis disabled for curator events
@@ -266,7 +269,6 @@ call vn_mf_fnc_display_location_time;
 
 // Tutorial System
 [] call vn_mf_fnc_tutorial_subsystem_client_init;
-
 
 //Add Master Arm addAction for Boats and Land Vehicles
 if hasInterface then
