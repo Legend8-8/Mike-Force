@@ -284,6 +284,9 @@ diag_log "VN MikeForce: Initialising stats";
 //Set date here - it's as good a place as any. Day is just before a full moon, for good night ops.
 [vn_mf_dawnLength, vn_mf_dayLength, vn_mf_duskLength, vn_mf_nightLength] call para_s_fnc_day_night_subsystem_init;
 
+/*
+@dijksterhuis disabling for curators
+
 diag_log "VN MikeForce: Initialising Loadbalancer";
 //Initialise the AI loadbalancer.
 [] call para_s_fnc_loadbal_subsystem_init;
@@ -299,6 +302,8 @@ diag_log "VN MikeForce: Initialising Harass";
 // Start harassment subsystem. Depends on the AI subsystem.
 [] call para_s_fnc_harass_subsystem_init;
 
+*/
+
 diag_log "VN MikeForce: Initialising Vehicle Manager";
 // start vehicle asset management subsystem
 [] call vn_mf_fnc_veh_asset_subsystem_init;
@@ -307,9 +312,15 @@ diag_log "VN MikeForce: Initialising Vehicle Creation Detection";
 // start vehicle creation detection subsystem
 [] call vn_mf_fnc_veh_create_detection_subsystem_init;
 
+/*
+
+@dijksterhuis disabling for curators
+
 diag_log "VN MikeForce: Initialising AI Behaviour";
 // start the behaviour subsystem
 [] call para_g_fnc_ai_behaviour_subsystem_init;
+
+*/
 
 //Set up slingloaded item locality on helicopters.
 ["vehicleCreated", [
@@ -320,6 +331,10 @@ diag_log "VN MikeForce: Initialising AI Behaviour";
     },
     []
 ]] call para_g_fnc_event_add_handler;
+
+/*
+
+@dijksterhuis disabling for curators
 
 diag_log "VN MikeForce: Initialising Zones";
 // Initialise the zones
@@ -336,6 +351,11 @@ diag_log "VN MikeForce: Initialising Sites";
 diag_log "VN MikeForce: Initialising Gameplay Director";
 // Initialise the gameplay director
 [] call vn_mf_fnc_director_init;
+
+*/
+
+// @dijksterhuis: added for curation
+vn_mf_markers_zones apply {deleteMarker _x};
 
 diag_log "VN MikeForce: Initialising Safe Zones";
 [] call vn_mf_fnc_arsenal_safe_zones_init;
