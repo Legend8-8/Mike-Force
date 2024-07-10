@@ -16,6 +16,7 @@
 
 // stuff players can destroy
 private _classNames = [
+        'Land_vn_o_platform_04',
 	'vn_o_nva_navy_static_zpu4',
 	'Land_vn_pavn_launchers',
 	'Land_vn_o_shelter_06',
