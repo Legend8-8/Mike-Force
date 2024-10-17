@@ -36,8 +36,6 @@ params ["_pos"];
 		{     
 			_x setVariable ["vn_log_enablePickup", false];
 		} forEach _objects;
-        _x setVariable ["vn_log_enablePickup", false];
-	    } forEach _objects;
 		
 		vn_site_objects append _objects;
 
