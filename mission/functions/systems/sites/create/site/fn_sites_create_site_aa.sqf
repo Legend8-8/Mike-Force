@@ -33,7 +33,9 @@ params ["_pos"];
 
 		private _objects = [_spawnPos] call vn_mf_fnc_sites_create_compositions_aa;             
        
-       {     
+		{     
+			_x setVariable ["vn_log_enablePickup", false];
+		} forEach _objects;
         _x setVariable ["vn_log_enablePickup", false];
 	    } forEach _objects;
 		
