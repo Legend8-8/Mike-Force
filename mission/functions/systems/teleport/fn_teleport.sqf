@@ -41,6 +41,10 @@ if(_destinationName isEqualTo "satansangels_base") exitWith {
   if ((toLower worldName) isEqualTo "cam_lao_nam") then {
     _player setPosATL [20152.6,67.6535,123.54];
   };
+  else
+  {
+    _player setPos _newLocation;
+  };
 };
 
 _player setPos _newLocation;
