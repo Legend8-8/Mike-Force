@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1862;
+		nextID=1894;
 	};
 	class Camera
 	{
-		pos[]={9777.8457,253.98477,6528.5933};
-		dir[]={0.35481206,-0.479287,0.80274802};
-		up[]={0.19376178,0.87765867,0.43837878};
-		aside[]={0.91464734,3.0105002e-07,-0.40427002};
+		pos[]={10096.59,253.98477,6493.1558};
+		dir[]={0.53548145,-0.76038361,0.36755517};
+		up[]={0.62691152,0.64947492,0.43031302};
+		aside[]={0.5659197,-3.5157427e-08,-0.82447141};
 	};
 };
 binarizationWanted=0;
-sourceName="bn_mikeforce_indev";
+sourceName="MikeForce";
 addons[]=
 {
 	"A3_Ui_F",
@@ -12773,18 +12773,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={10106.866,231.50311,6500.9282};
-				angles[]={0.0053187669,4.9626298,6.2805181};
+				position[]={10106.866,231.50381,6500.9277};
+				angles[]={0.0053232545,4.9626346,6.2805147};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				name="freefire_arsenal_1";
 				disableSimulation=1;
 			};
 			id=1496;
 			type="Land_vn_us_weapons_stack2";
-			atlOffset=-0.0007019043;
 			class CustomAttributes
 			{
 				class Attribute0
