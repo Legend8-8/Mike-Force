@@ -1001,6 +1001,8 @@ class spawn_point_types {
 					"vn_b_wheeled_m151_mg_02_mp",
 					"vn_b_wheeled_m151_mg_03_mp",
 					"vn_b_wheeled_m151_mg_04_mp",
+					"vn_b_wheeled_lr2a_02_nz_army",
+					"vn_b_wheeled_lr2a_02_aus_army",
 				};
 			};
 			class transport {
