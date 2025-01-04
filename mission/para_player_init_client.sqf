@@ -176,7 +176,6 @@ _loadingTickProgress = [_loadingTickProgress] call _fnc_tick_loading_screen;
 
 if (_lastTeamName == "SatansAngels") then {
 	if ((toLower worldName) isEqualTo "cam_lao_nam") then {
-	{
 		player setPosATL [20152.6,67.6535,123.54];
 	} else {
 		player setPos getMarkerPos _respawnMarker;
