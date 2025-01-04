@@ -33876,7 +33876,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={9406.7666,231.343,6648.4609};
-			name="mf_respawn_satansangel_land_hangars";
+			name="mf_respawn_satansangel";
 			text="SATANS ANGELS";
 			type="Empty";
 			angle=13.891998;
