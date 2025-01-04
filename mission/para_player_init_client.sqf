@@ -174,8 +174,13 @@ if (side player == east) then
 };
 _loadingTickProgress = [_loadingTickProgress] call _fnc_tick_loading_screen;
 
-if (_lastTeamName == "SatansAngels" && toLower(worldName) in ["cam_lao_nam"]) then {
-	player setPosATL [20152.6,67.6535,123.54];
+if (_lastTeamName == "SatansAngels") then {
+	if ((toLower worldName) isEqualTo "cam_lao_nam") then {
+	{
+		player setPosATL [20152.6,67.6535,123.54];
+	} else {
+		player setPos getMarkerPos _respawnMarker;
+	};
 } else {
 	player setPos getMarkerPos _respawnMarker;
 };
