@@ -314,7 +314,7 @@ class destinations
 	class sa_base
 	{
 		image = "custom\taskroster\satansangels_HL.paa"; 
-		position_marker = "mf_respawn_satansangel_land_hangars";
+		position_marker = "mf_respawn_satansangels_land_hangars";
 	};
 
 	class sasr_base
