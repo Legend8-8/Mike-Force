@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2152;
+		nextID=2190;
 	};
 	class Camera
 	{
-		pos[]={9782.6689,264.55362,6741.4321};
-		dir[]={0.6454733,-0.55502939,0.52470255};
-		up[]={0.43068391,0.8318305,0.35010111};
-		aside[]={0.6307801,2.5960617e-08,-0.77596635};
+		pos[]={9668.3613,239.62131,6543.3408};
+		dir[]={-0.70649248,-0.3639999,0.60702562};
+		up[]={-0.27611512,0.93139112,0.23724093};
+		aside[]={0.65173101,-1.7881393e-07,0.75851923};
 	};
 };
 binarizationWanted=0;
@@ -30710,8 +30710,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9651.6826,233.34337,6566.8989};
-				angles[]={0,0.16847663,0};
+				position[]={9649.8604,233.27133,6562.4707};
+				angles[]={0,4.9005604,-0};
 			};
 			side="Empty";
 			flags=5;
@@ -30722,7 +30722,7 @@ class Mission
 			};
 			id=3084;
 			type="Land_Billboard_F";
-			atlOffset=0.065002441;
+			atlOffset=0.0011138916;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -40579,8 +40579,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9649.6924,231.98322,6562.7686};
-				angles[]={0,4.8994617,0};
+				position[]={9650.4922,231.98322,6568.6343};
+				angles[]={0,3.3238585,-0};
 			};
 			side="Empty";
 			flags=1;
@@ -40589,7 +40589,7 @@ class Mission
 			};
 			id=3853;
 			type="vn_sign_town_c_04_01";
-			atlOffset=0.45573425;
+			atlOffset=0.43513489;
 		};
 		class Item606
 		{
