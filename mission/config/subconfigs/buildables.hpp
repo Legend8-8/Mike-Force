@@ -62,7 +62,37 @@ class Land_vn_guardhouse_01
 		class respawn {};
 	};
 };
-
+class Land_vn_lampshabby_f_dir_far
+{
+	name = "";
+	type = "aid";
+	categories[] = {"medical", "functional", "tents"};
+	rank = 0;
+	SUPPLY_CAPACITY(1000, HOURS_TO_SECONDS(2));
+	resupply = "BuildingSupplies";
+	conditions[] = {
+		CONDITION_HAS_RANK,
+		CONDITION_IS_ENGINEER,
+		CONDITION_IS_ON_FOOT,
+		CONDITION_NOT_IN_RESTRICTED_ZONE,
+		CONDITION_IS_ACAV
+	};
+	class build_states
+	{
+		class initial_state
+		{
+			object_class = "Land_vn_lampshabby_f_dir_far";
+		};
+		class middle_state
+		{
+			object_class = "Land_vn_lampshabby_f_dir_far";
+		};
+		class final_state
+		{
+			object_class = "Land_vn_lampshabby_f_dir_far";
+		};
+	};
+};
 class Land_vn_tent_mash_01_04
 {
 	name = "STR_vn_mf_aid_post";
