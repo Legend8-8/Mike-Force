@@ -369,6 +369,9 @@ class vn_logistics
             rotation_offset = 0;
         };
 		//US Ammo
+		class Box_NATO_AmmoOrd_F : Box_NATO_AmmoOrd_F{};
+		class Box_NATO_Support_F : Box_NATO_Support_F {};
+		class Box_NATO_Ammo_F : Box_NATO_Ammo_F {};
 		class vn_b_ammobox_supply_01 : vn_b_ammobox_sog {};
 		//Medical supplies
 		class vn_b_ammobox_supply_03 : vn_b_ammobox_sog {};
