@@ -67,7 +67,7 @@ class AmmoCrateLight
         {"vn_m1a1_30_mag",30},
         {"vn_hp_mag",30},
         {"vn_m14_10_mag",30},
-        {"vn_l1a1_30_mag",60},
+        {"vn_l1a1_30_mag",60}
 	};
 	items[] = {};
 	backpacks[] = {{"vn_b_pack_static_base_01", 5},{"vn_b_pack_static_tow",5},{"vn_b_pack_static_ammo_01",2}};
@@ -142,7 +142,7 @@ class AmmoCrateExplosives
 	objectClassname = "Box_NATO_AmmoOrd_F";
 	weapons[] = {
 		{"vn_m79",2},
-		{"vn_m72",10},
+		{"vn_m72",10}
 	};
 	magazines[] = {
 		{"vn_m61_grenade_mag",30},

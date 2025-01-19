@@ -368,23 +368,9 @@ class vn_logistics
             spawn_distance = 3;
             rotation_offset = 0;
         };
-		class Box_NATO_AmmoOrd_F
-		{
-		    item_weight = 100;
-            item_size = 2.5;
-            spawn_distance = 3;
-            rotation_offset = 0;	
-		};
-		class Box_NATO_Support_F
-		{
-		    item_weight = 100;
-            item_size = 2.5;
-            spawn_distance = 3;
-            rotation_offset = 0;
-		};
 		//US Ammo
-		class Box_NATO_AmmoOrd_F : Box_NATO_AmmoOrd_F {};
-		class Box_NATO_Support_F : Box_NATO_Support_F {};
+		class Box_NATO_AmmoOrd_F : vn_b_ammobox_sog {};
+		class Box_NATO_Support_F : vn_b_ammobox_sog {};
 		class Box_NATO_Ammo_F : vn_b_ammobox_sog {};
 		//Medical supplies
 		class vn_b_ammobox_supply_03 : vn_b_ammobox_sog {};
