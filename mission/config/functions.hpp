@@ -365,6 +365,8 @@ class CfgFunctions
 			// old not used
 			class sites_create_tunnel {};
 			class sites_create_camp {};
+
+			class sites_create_objects_with_tree_removal {};
 		}
 
 		// creating individual sites using main sites code and compositions
