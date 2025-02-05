@@ -331,6 +331,7 @@ class CfgFunctions
 			class sites_subsystem_client_init {};
 			class sites_discovery_job {};
 			class sites_create_initial_static_ai_crews {};
+			class sites_create_objects_with_tree_removal {};
 		};
 
 		// remote actions that can be performed at sites
@@ -365,8 +366,6 @@ class CfgFunctions
 			// old not used
 			class sites_create_tunnel {};
 			class sites_create_camp {};
-
-			class sites_create_objects_with_tree_removal {};
 		}
 
 		// creating individual sites using main sites code and compositions
