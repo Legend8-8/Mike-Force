@@ -37,8 +37,6 @@ vn_mf_flashlight_remove_action = player addAction
 			[player, _flashlightClass] remoteExecCall ["vn_mf_fnc_attachments_server_spawn_dropped_chemlight", 2];
 		};
 
-		player addItem _flashlightClass; // Give back their flashlight
-
 
         if (!isNil "vn_mf_flashlight_remove_action") then {
             player removeAction vn_mf_flashlight_remove_action;
@@ -53,3 +51,4 @@ vn_mf_flashlight_remove_action = player addAction
     _conditionToShow,
     2
 ];
+
