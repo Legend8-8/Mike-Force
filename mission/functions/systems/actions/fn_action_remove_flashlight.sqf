@@ -30,7 +30,11 @@ vn_mf_flashlight_remove_action = player addAction
 
         ["LightsourceAttachRemoved", []] call para_c_fnc_show_notification;
 		
-		player addItem _flashlightClass; // Give back their flashlight
+		if (player canAdd _flashlightClass) then {
+			player addItem _flashlightClass; // Give back their flashlight (inventory)
+		} else {
+			[player, _flashlightClass] remoteExecCall ["vn_mf_fnc_attachments_server_spawn_dropped_chemlight", 2];
+		};
 
         if (!isNil "vn_mf_flashlight_remove_action") then {
             player removeAction vn_mf_flashlight_remove_action;
