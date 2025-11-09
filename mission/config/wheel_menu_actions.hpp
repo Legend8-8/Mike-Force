@@ -78,6 +78,29 @@ class wheel_menu_actions
 		spawn = 0;
 	};
 
+	class surrender : base_action
+	{
+		visible = "ALWAYS";
+		condition = "([_target, 'DacCong'] call vn_mf_fnc_player_on_team) && !(_target getVariable ['isSurrendered', false])";
+		text = "Surrender";
+		icon = "img\vn_ico_mf_emotes.paa";
+		icon_highlighted = "";
+		arguments = "true";
+		function = "vn_mf_fnc_active_surrender";
+		spawn = 0;
+	};
+
+	class stop_surrender : base_action
+	{
+		visible = "ALWAYS";
+		condition = "([_target, 'DacCong'] call vn_mf_fnc_player_on_team) && (_target getVariable ['isSurrendered', false])";
+		text = "Stop Surrendering";
+		icon = "img\vn_ico_mf_emotes.paa";
+		icon_highlighted = "";
+		arguments = "true";
+		function = "vn_mf_fnc_active_stop_surrender";
+		spawn = 0;
+	};
 	//Add a sandbag to a building.
 	class add_sandbag : base_action
 	{

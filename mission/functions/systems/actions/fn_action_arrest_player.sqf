@@ -1,10 +1,11 @@
 /*
 	File: fn_action_arrest_player.sqf
 	Author: Duke Lawrence
+	Modified by: Legend
 	Public: No
 	
 	Description:
-		Arrest another player
+		MPs arrest DAC players as part of the prisoner RP system.
 	
 	Parameter(s): none
 	
@@ -19,7 +20,7 @@
 	format ["<t color='#B700FF'>%1</t>", localize 'STR_vn_mf_arrest_player'],							// Title of the action
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",	// Idle icon shown on screen
 	"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_secure_ca.paa",	// Progress icon shown on screen
-	"(player getVariable ['isArrested', 'false'] == 'false') && (player getVariable ['vn_mf_db_player_group', 'MikeForce'] in ['MilitaryPolice', 'DacCong']) && player distance cursorTarget <= 3 &&{ vehicle player isEqualTo player && {cursorTarget isKindOf 'Man' && {alive cursorTarget}}}",	// Condition for the action to be shown
+	"(player getVariable ['vn_mf_db_player_group',''] in ['MilitaryPolice']) && (cursorTarget getVariable ['vn_mf_db_player_group',''] in ['DacCong']) && player distance cursorTarget <= 3 && vehicle player isEqualTo player && cursorTarget isKindOf 'Man' && alive cursorTarget && !(cursorTarget getVariable ['isArrested',false]) && !(cursorTarget getVariable ['isUnconscious', false])",	// Condition for the action to be shown
 	"player distance cursorTarget < 5",						// Condition for the action to progress
 	{},	// Code executed when action starts
 	{},	// Code executed on every progress tick
@@ -28,7 +29,9 @@
 	},// Code executed on completion
 	{},	// Code executed on interrupted
 	[],													// Arguments passed to the scripts as _this select 3
-	0.5,													// Action duration [s]
+	{
+		(cursorTarget getVariable ['isSurrendered', false]) then {1} else {3}
+	},// Action duration [s]
 	100,													// Priority
 	false,											// Remove on completion
 	false												// Show in unconscious state

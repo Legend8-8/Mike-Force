@@ -2,20 +2,20 @@
 	File: fn_zones_create_site_wreck.sqf
 	Author: @dijksterhuis
 	Public: No
-	
+
 	Description:
 		Creates an 'Wreck' site in the given zone.
 		A 'Wreck' site is 1x Wrecked Blufor Helo object with bodies around it.
 
 		The bodies need to have the "Recover Tags" holdAction run on them.
 		The Wreck itself needs to be destroyed with the "Destroy Task" holdAction.
-	
+
 	Parameter(s):
 		_zone - Zone marker name [STRING]
-	
+
 	Returns:
 		Task data store [NAMESPACE]
-	
+
 	Example(s):
 		[[0, 0, 0]] call vn_mf_fnc_zones_create_site_wreck
 */
@@ -78,6 +78,8 @@ private _hmapParams = [
 		private _spawnPos = _sitePos;
 		private _spawnData = selectRandom _hmapParams;
 
+		private _nearbyTrees = nearestTerrainObjects [_sitePos, ["TREE", "SMALL TREE", "BUSH"], 50, false, true];
+
 		/////////////////////////////////////////////////////////////////////////////////
 		// Spawn Wreck Objects
 		/////////////////////////////////////////////////////////////////////////////////
@@ -121,6 +123,27 @@ private _hmapParams = [
 
 		_objects
 			apply {
+
+                private _object = _x;
+
+                // Get the object's bounding box
+                private _boundingBox = boundingBoxReal _object;
+
+                // Calculate the maximum radius of the bounding box
+                private _xSize = abs(((_boundingBox select 1) select 0) - ((_boundingBox select 0) select 0)) / 2;
+                private _ySize = abs(((_boundingBox select 1) select 1) - ((_boundingBox select 0) select 1)) / 2;
+                private _maxRadius = (_xSize max _ySize) * 1.2; // Add 20% margin
+
+                // <<< ADDED :: Force a minimum 2m radius for small objects like bodies
+                _maxRadius = _maxRadius max 2;
+
+                // Remove trees within the object's footprint
+                {
+                    if (_x distance _object < _maxRadius) then {
+                        _x hideObjectGlobal true;
+                    };
+                } forEach _nearbyTrees;
+
 				[_x] call vn_mf_fnc_sites_utils_normalise_object_placement;
 				[_x] call vn_mf_fnc_sites_object_zfixer_add_object;
 				[_x, true] call para_s_fnc_enable_dynamic_sim;

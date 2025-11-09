@@ -2,23 +2,23 @@
 	File: fn_sites_get_unsafe_terrain_objects.sqf
 	Author: "DJ" Dijksterhuis"
 	Public: No
-	
+
 	Description:
-		
-	
+
+
 	Parameter(s):
-		
-	
+
+
 	Returns:
-		
-	
+
+
 	Example(s):
-		
+
 */
 
-private _debug = false;
+private _debug = true;
 
-params ["_sitePos", "_siteRadius", ["_terrainTypesArr", ["ROCK", "ROCKS", "HIDE"]]];
+params ["_sitePos", "_siteRadius", ["_terrainTypesArr", ["ROCK", "ROCKS", "TREE", "BUSH", "HIDE"]]];
 
 // get the first object only to avoid a nested for loop over every site object
 // (leave the terrain object search radius high to capture everything nearby).
@@ -61,10 +61,10 @@ _nearbyTerrainObjs apply {
 	*/
 
 	private _areaArr = [
-		getPos _x, 
-		_maxDimensionRadius + (_siteRadius / 2), 
-		_maxDimensionRadius + (_siteRadius / 2),  
-		0, 
+		getPos _x,
+		_maxDimensionRadius + (_siteRadius / 2),
+		_maxDimensionRadius + (_siteRadius / 2),
+		0,
 		true
 	];
 
@@ -80,7 +80,7 @@ _nearbyTerrainObjs apply {
 		*/
 		private _additionalObjects = nearestTerrainObjects [
 			getPos _x,
-			[], 
+			[],
 			_maxDimensionRadius,
 			false,
 			true

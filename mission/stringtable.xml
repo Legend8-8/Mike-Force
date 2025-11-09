@@ -149,6 +149,9 @@
       <Key ID="STR_vn_mf_arrest_player">
         <Original>Arrest</Original>
       </Key>
+      <Key ID="STR_vn_mf_load_player">
+        <Original>Load Prisoner</Original>
+      </Key>
       <Key ID="STR_vn_mf_release_from_arrest_player">
         <Original>Release</Original>
       </Key>

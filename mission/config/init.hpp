@@ -17,6 +17,8 @@
 #include "notifications.hpp"
 // arsenal additions
 #include "arsenal.hpp"
+// Jets module config
+//#include "curator_reinforcement_jets.hpp"
 //TFAR configs
 #include "tfar.hpp"
 // sound configs

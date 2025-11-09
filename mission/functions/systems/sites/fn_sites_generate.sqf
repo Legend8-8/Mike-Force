@@ -2,16 +2,16 @@
     File: fn_sites_generate.sqf
     Author: Savage Game Design
     Public: No
-    
+
     Description:
-		Places new sites down on the map procedurally. 
-    
+		Places new sites down on the map procedurally.
+
     Parameter(s):
 		_zone - Targeted zone
 
     Returns:
 		None
-    
+
     Example(s):
 		[] call vn_mf_fnc_sites_generate
 */
@@ -32,7 +32,7 @@ private _factoryPosition = [_center, vn_mf_bn_s_zone_radius, 0, 55, 5, _allTerra
 private _hqPosition = [_center, vn_mf_bn_s_zone_radius, 0, 30, 5, _allTerrainObjects] call vn_mf_fnc_sites_get_safe_location;
 [_hqPosition, _zone] call vn_mf_fnc_sites_create_site_hq;
 
-// Radar sites use the old hide terrain radius to stop clipping 
+// Radar sites use the old hide terrain radius to stop clipping
 for "_i" from 1 to (1 + ceil random (vn_mf_s_max_radars_per_zone - 1)) do
 {
 	private _radarTerrainObjects = _allTerrainObjects + ["TREE", "BUSH", "SMALL TREE"];
@@ -99,6 +99,9 @@ private _radios = vn_site_objects select {
 _radios apply {_x call vn_mf_fnc_action_radiotap};
 
 missionNamespace setVariable ["siteRadios", _radios];
+
+// Road mines — once per AO (debug off for normal runs)
+[_zone, 10, 100, false] call vn_mf_fnc_sites_seed_zone_road_mines;
 
 [] call vn_mf_fnc_sites_create_initial_static_ai_crews;
 

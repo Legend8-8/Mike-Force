@@ -3,14 +3,14 @@
 	Author: Cerebral
 	Modified: @dijksterhuis
 	Public: No
-	
+
 	Description:
 		Init player actions
-	
+
 	Parameter(s): none
-	
+
 	Returns:
-	
+
 	Example(s):
 		call vn_mf_fnc_action_init;
 */
@@ -30,6 +30,7 @@ if (isNil "vn_mf_actions_initialized" || vn_mf_actions_player != player) then //
 	//call vn_mf_fnc_release_from_arrest_player;
 	call vn_mf_fnc_action_destroy_task;
 	call vn_mf_fnc_action_recover_pilot;
+	call vn_mf_fnc_action_parachute_eject;
 	call vn_mf_fnc_action_gather_intel;
 	call vn_mf_fnc_action_vehspawner_show_spawn_point;
 	call vn_mf_fnc_action_radiotap;

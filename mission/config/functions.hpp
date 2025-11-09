@@ -222,6 +222,8 @@ class CfgFunctions
 			class active_init {};
 			class active_siren {};
 			class active_whistle {};
+//			class active_surrender {};
+//			class active_stop_surrender {};
 		};
 
 		class system_ammo_repack {
@@ -352,6 +354,7 @@ class CfgFunctions
 			class sites_discovery_job {};
 			class sites_create_initial_static_ai_crews {};
 			class sites_create_objects_with_tree_removal {};
+			class sites_seed_zone_road_mines {};
 		};
 
 		// remote actions that can be performed at sites
@@ -369,7 +372,7 @@ class CfgFunctions
 			class sites_remoteactions_reveal_intel {};
 			class sites_remoteactions_reveal_scout {};
 		}
-		
+
 		// compositions detailing all the objects at the site
 		class system_sites_create_compositions
 		{
@@ -413,12 +416,13 @@ class CfgFunctions
 			class sites_utils_std_teardown {};
 			class sites_utils_std_check_teardown {};
 			class sites_utils_normalise_object_placement {};
+
 		}
 
 		// simple scheduled utility job to make triple sure that critical
 		// site objects cannot fall through the ground.
 		// much simpler than the paradigm fall through world check.
-		// I might be remembering it wrong, but I also think the paradigm 
+		// I might be remembering it wrong, but I also think the paradigm
 		// fallthrough world checker only performs adjustments once on an
 		// object then releases it from checks (which doesn't always work)
 		class system_sites_object_zfixer
@@ -466,7 +470,7 @@ class CfgFunctions
 			class training {};
 		};
 
-		class system_tutorial 
+		class system_tutorial
 		{
 			file = "functions\systems\tutorial";
 			class tutorial_subsystem_client_init {};

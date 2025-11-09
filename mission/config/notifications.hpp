@@ -268,6 +268,14 @@ class CfgNotifications
 		iconPicture = "\A3\ui_f\data\Map\Markers\Military\warning_ca.paa";
 	};
 
+	class ComsTowerBuilt {
+		title = "Da Cong Comms Tower Constructed";
+		description = "Expect reinforcements to arrive shortly.";
+		iconPicture = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\radio_ca.paa";
+		color[] = {1, 0.1, 0.1, 1};
+		duration = 8;
+	};
+
 	class POWCapturedRed
 	{
 		title = $STR_vn_mf_notification_title_captured_pow;
