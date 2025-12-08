@@ -1,3 +1,4 @@
+
 class CfgFunctions
 {
 	#include "..\paradigm\client\functions.hpp"
@@ -79,6 +80,14 @@ class CfgFunctions
 			class teams_comms_switchers_onoff_ground {};
 			class teams_comms_switchers_onoff {};
 			class teams_comms_switchers_off_all {};
+		};
+		class core_teams_comms_transmit_channels
+		{
+			file = "functions\core\teams\comms_channel_changer";
+			class teams_comms_change_channel {};
+			class teams_comms_transmit_to_ground {};
+			class teams_comms_transmit_to_air {};
+			class teams_comms_transmit_to_cff {};
 		};
 
 		class core_workarounds
