@@ -24,7 +24,7 @@ _weapon enableWeaponDisassembly false;
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
 		[_target, 1] remoteExec ["setDamage", 0];
-		[_target, _actionId] remoteExec ["removeAction", _target];
+		[_target, _actionId] remoteExec ["removeAction", 0];
 	},
 	nil,
 	2,
