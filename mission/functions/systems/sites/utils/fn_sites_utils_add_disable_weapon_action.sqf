@@ -20,7 +20,7 @@ params ["_weapon"];
 
 _weapon enableWeaponDisassembly false;
 
-[
+private _actionId = [
     _weapon,
     "Disable Weapon",
     "custom\holdactions\holdAction_interact_ca.paa",
@@ -33,6 +33,9 @@ _weapon enableWeaponDisassembly false;
         params ["_target", "_caller", "_actionId", "_arguments", "_progress", "_maxProgress"];
         [_target, 1] remoteExec ["setDamage", 2];
         hint "Weapon disabled.";
+        
+        // Remove this action from all clients
+        [_target, _actionId] remoteExec ["BIS_fnc_holdActionRemove", 0];
     },
     {},
     [],
@@ -41,3 +44,5 @@ _weapon enableWeaponDisassembly false;
     true,
     false
 ] remoteExec ["BIS_fnc_holdActionAdd", 0, _weapon];
+
+_weapon setVariable ["disableWeaponActionId", _actionId, true];
