@@ -32,35 +32,48 @@ else:
     map_root = content_root / "maps"
     map_folders = [ map_path for map_path in map_root.iterdir() if map_path.is_dir() ]
 
+    def mission_folder_name(map_folder_name):
+        if map_folder_name == "mftraining":
+            return "bn_mftraining_indev.cam_lao_nam"
+        return f"{mission_stem}.{map_folder_name}"
+
     arma_missions_folder = Path(user_paths.MISSIONS_PATH)
     arma_missions_folder.mkdir(parents=True, exist_ok=True)
 
-    def symlink_immediate_children(target, source):
+    # Folders from mission/ that only belong in the training mission
+    training_only_folders = {"training"}
+
+    def symlink_immediate_children(target, source, exclude=None):
         for path in source.iterdir():
-            (target / path.name).symlink_to(path, target_is_directory=path.is_dir())
+            if exclude and path.name in exclude:
+                continue
+            target_path = target / path.name
+            if target_path.exists():
+                continue
+            target_path.symlink_to(path, target_is_directory=path.is_dir())
 
-    existing_path_found = False
+    existing_paths = []
     for map_folder in map_folders:
-        target_folder = arma_missions_folder / f"{mission_stem}.{map_folder.name}"
+        target_folder = arma_missions_folder / mission_folder_name(map_folder.name)
         if target_folder.exists():
-            print(f"Existing mission folder exists: {target_folder}")
-            existing_path_found = True
-
-        if existing_path_found:
-            continue
-
-        target_folder.mkdir()
+            print(f"Existing mission folder exists, syncing missing links: {target_folder}")
+            existing_paths.append(target_folder)
+        else:
+            target_folder.mkdir()
 
         print("Symlinking map-specific content...")
         symlink_immediate_children(target_folder, map_folder)
         print("Symlinking mission content...")
-        symlink_immediate_children(target_folder, mission_root)
+        exclude = None if map_folder.name == "mftraining" else training_only_folders
+        symlink_immediate_children(target_folder, mission_root, exclude=exclude)
         print("Symlinking paradigm...")
-        (target_folder / "paradigm").symlink_to(paradigm_path, target_is_directory=True)
+        paradigm_target = target_folder / "paradigm"
+        if not paradigm_target.exists():
+            paradigm_target.symlink_to(paradigm_path, target_is_directory=True)
 
-    if existing_path_found:
-        print("Cannot create links in Documents/Arma 3 - existing folders found. Please delete these then try again.")
+    if existing_paths:
+        print("Synced missing links into existing mission folders.")
 
     input("Press any key to exit...")
-    exit(1 if existing_path_found else 0)
+    exit(0)
 

@@ -34,6 +34,15 @@ call vn_mf_fnc_server_init_backend;
 
 /*
 =========================================================================================
+Training Server Detection
+=========================================================================================
+Set to true if training scripts/functions are available in this mission config
+*/
+vn_mf_is_training_server = isClass (missionConfigFile >> "CfgFunctions" >> "vn_mf" >> "training");
+publicVariable "vn_mf_is_training_server";
+
+/*
+=========================================================================================
 job: `restart_messages`
 =========================================================================================
 WARNING: YOU WILL NOT HAVE THIS DURING LOCAL DEVELOPMENT. This always generates an error
@@ -199,6 +208,9 @@ vn_site_objects = [];
 
 // Set desired number of simultaneously active zones.
 vn_mf_targetNumberOfActiveZones = 1;
+// Optional per-map flag in class map_config. Defaults to auto-start (0) when undefined.
+vn_mf_manual_ao_start = getNumber (missionConfigFile >> "map_config" >> "manual_ao_start") > 0;
+publicVariable "vn_mf_manual_ao_start";
 // Set number of enemies per player. Scale the default value by the percentage set in the config options.
 para_g_enemiesPerPlayer = ((["ai_scaling", 100] call BIS_fnc_getParamValue) / 100) * 2;
 //Global variable, so it needs syncing across the network.

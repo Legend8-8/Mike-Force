@@ -278,6 +278,27 @@
 	    <Key ID="STR_vn_mf_respawn_shooting_range">
         <Original>GUN RANGE</Original>
       </Key>
+	    <Key ID="STR_vn_mf_respawn_cqb_range">
+        <Original>CQB RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_explosives_range">
+        <Original>EXPLOSIVES RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_sapper_range">
+        <Original>SAPPER RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_engineer_range">
+        <Original>ENGINEER RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_jtac_range">
+        <Original>JTAC RANGE</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_rappel_range_bot">
+        <Original>RAPPEL RANGE BOT</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_rappel_range_top">
+        <Original>RAPPEL RANGE TOP</Original>
+      </Key>
 	    <Key ID="STR_vn_mf_respawn_militarypolice">
         <Original>MILITARY POLICE</Original>
       </Key>
@@ -310,6 +331,9 @@
       </Key>
 	    <Key ID="STR_vn_mf_respawn_sasr">
         <Original>ANZAC</Original>
+      </Key>
+	    <Key ID="STR_vn_mf_respawn_Instructors">
+        <Original>INSTRUCTORS</Original>
       </Key>
       <Key ID="STR_vn_mf_supply_officer">
         <Original>Supply Officer</Original>
@@ -553,6 +577,9 @@
       </Key>
       <Key ID="STR_MF_HELP_MACV_SUB">
         <Original>Fast travel to WLU bases</Original>
+      </Key>
+      <Key ID="STR_MF_HELP_MACV_TRAINING_SUB">
+        <Original>Fast travel to training grounds</Original>
       </Key>
       <Key ID="STR_vn_mf_taskRoster_Main_MikeForceDescription">
         <Original>As special forces infantry, your team's role is to:&lt;br/&gt;- Sweep and clear areas of enemy&lt;br/&gt;- Secure and hold zones&lt;br/&gt;- Protect populations, logistics and supplies&lt;br/&gt;- Reinforce other teams&lt;br/&gt;Tasks&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_primary.paa'/&gt; Primary Tasks are shared by all teams.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_secondary.paa'/&gt; Secondary Tasks are unique to your team.&lt;br/&gt;- &lt;img color='#CC000000' image='\vn\ui_f_vietnam\ui\taskroster\img\icons\vn_icon_task_support.paa'/&gt; Support Tasks are called by other teams in need of your help. You may also request their support, for example transport is provided for you by ACAV or Green Hornets.</Original>
