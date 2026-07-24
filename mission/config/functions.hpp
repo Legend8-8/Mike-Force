@@ -221,6 +221,8 @@ class CfgFunctions
 		class system_actions {
 			file = "functions\systems\actions";
 			class action_init {};
+			class action_can_crew_static {};
+			class action_crew_static {};
 			class action_ai_snap_neck {};
 			class action_search_weapon {};
 			class action_vehspawner_show_spawn_point {};
@@ -339,6 +341,7 @@ class CfgFunctions
 			class capture_travel {};
 			class ctf_handle_flag_height_change {};
 			class ctf_broadcast_notify_immediate {};
+			class coms_tower_beacon_client {};
 		}
 
 		//Gameplay director, responsible for main game progression and flow.
@@ -428,7 +431,7 @@ class CfgFunctions
 			class sites_remoteactions_reveal_intel {};
 			class sites_remoteactions_reveal_scout {};
 		}
-		
+
 		// compositions detailing all the objects at the site
 		class system_sites_create_compositions
 		{
@@ -500,7 +503,7 @@ class CfgFunctions
 		// simple scheduled utility job to make triple sure that critical
 		// site objects cannot fall through the ground.
 		// much simpler than the paradigm fall through world check.
-		// I might be remembering it wrong, but I also think the paradigm 
+		// I might be remembering it wrong, but I also think the paradigm
 		// fallthrough world checker only performs adjustments once on an
 		// object then releases it from checks (which doesn't always work)
 		class system_sites_object_zfixer
@@ -523,6 +526,7 @@ class CfgFunctions
 
 		class system_tasks {
 			file = "functions\systems\tasks";
+			class opfor_crew_static {};
 			class supporttaskcreate {};
 			class task_client_on_task_completed {};
 			class task_client_on_task_created {};
@@ -549,7 +553,7 @@ class CfgFunctions
 			class training {};
 		};
 
-		class system_tutorial 
+		class system_tutorial
 		{
 			file = "functions\systems\tutorial";
 			class tutorial_subsystem_client_init {};
@@ -677,6 +681,7 @@ class CfgFunctions
 		class tasks
 		{
 			class create_support_default { file = "functions\tasks\task_creation\fn_create_support_default.sqf"; };
+			class create_support_opfor_troops { file = "functions\tasks\task_creation\fn_create_support_opfor_troops.sqf"; };
 
 			class simple_task_system { file = "functions\tasks\fn_simple_task_system.sqf"; };
 			class state_machine_task_system { file = "functions\tasks\fn_state_machine_task_system.sqf"; };
@@ -703,6 +708,7 @@ class CfgFunctions
 			class task_sup_destroy_target { file = "functions\tasks\support\fn_task_sup_destroy_target.sqf"; };
 			class task_sup_transport { file = "functions\tasks\support\fn_task_sup_transport.sqf"; };
 			class task_sup_resupply { file = "functions\tasks\support\fn_task_sup_resupply.sqf";};
+			class task_sup_opfor_create { file = "functions\tasks\support\fn_task_sup_opfor_create.sqf";};
 			class task_zone_connector { file = "functions\tasks\fn_zone_connector.sqf";};
 		};
 	};
