@@ -323,6 +323,21 @@ Deletes bodies, objects and gear after a certain amount of time.
 */
 
 diag_log "VN MikeForce: Initialising Cleanup Routine";
+
+// Lifetime (seconds) before OPFOR support wrecks are eligible for cleanup.
+// By default this follows dropped-gear cleanup timing for consistent clutter control.
+private _defaultWreckCleanupLifetime = ["cleanup_dropped_gear_lifetime", 300] call BIS_fnc_getParamValue;
+missionNamespace setVariable ["vn_mf_opfor_support_wreck_cleanup_time", ["cleanup_opfor_wreck_lifetime", _defaultWreckCleanupLifetime] call BIS_fnc_getParamValue, true];
+missionNamespace setVariable ["vn_mf_opfor_support_body_cleanup_time", ["cleanup_opfor_body_lifetime", _defaultWreckCleanupLifetime] call BIS_fnc_getParamValue, true];
+missionNamespace setVariable ["vn_mf_opfor_support_active_unit_cleanup_time", ["cleanup_opfor_active_unit_lifetime", _defaultWreckCleanupLifetime] call BIS_fnc_getParamValue, true];
+missionNamespace setVariable ["vn_mf_opfor_support_active_vehicle_cleanup_time", ["cleanup_opfor_active_vehicle_lifetime", _defaultWreckCleanupLifetime] call BIS_fnc_getParamValue, true];
+missionNamespace setVariable ["vn_mf_opfor_support_access_radius", 500, true];
+missionNamespace setVariable ["vn_mf_opfor_static_crew_cost_sandbags", 5, true];
+missionNamespace setVariable ["vn_mf_opfor_static_crew_cooldown", 60, true];
+missionNamespace setVariable ["vn_mf_opfor_static_crew_spawn_min_distance", 300, true];
+missionNamespace setVariable ["vn_mf_coms_tower_beacon_loop_interval", 30, true];
+missionNamespace setVariable ["vn_mf_coms_tower_beacon_audible_to_sides", [west], true];
+
 [
     createHashmapFromArray [
         ["minPlayerDistance", ["cleanup_min_player_distance", 400] call BIS_fnc_getParamValue],

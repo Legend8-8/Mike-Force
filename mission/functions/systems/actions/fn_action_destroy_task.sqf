@@ -2,14 +2,14 @@
 	File: fn_action_destroy_task.sqf
 	Author: Cerebral
 	Public: No
-	
+
 	Description:
 		Pops a task
-	
+
 	Parameter(s): none
-	
+
 	Returns:
-	
+
 	Example(s):
 		call vn_mf_fnc_action_destroy_task;
 */
@@ -87,6 +87,8 @@ private _conditionToShowString = str {
 			"Land_vn_ruvehicleammo",
 			// dac cong resapwn
 			'Land_vn_o_platform_04',
+			// dac cong coms tower
+			'Land_vn_ttowersmall_2_f',
 			// wrecks
 			"vn_air_f4b_wreck",
 			"vn_air_f100d_01_wreck",
