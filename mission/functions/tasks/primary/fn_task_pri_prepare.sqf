@@ -13,7 +13,7 @@ params ["_taskDataStore"];
 /*
 CONSTANTS
 */
-_taskDataStore setVariable ["subtaskDurationSeconds", 10];
+_taskDataStore setVariable ["subtaskDurationSeconds", 3 * 60];
 _taskDataStore setVariable ["subtaskStartTimeRTB", 0];
 _taskDataStore setVariable ["subtaskStartTimePrepare", 0];
 _taskDataStore setVariable ["warningBufferMeters", 500];
@@ -26,7 +26,7 @@ METHODS
 The following function definitions are basically hacking the task definition
 to work in an object orientated manner as a class with methods ... sort of.
 
-If you've ever seen python OOP code you should be able to spot the method
+If you've ever seen python OOP code you should be able to spot the method 
 pattern below -- it just uses _tds instead of self
 
 class A:
@@ -96,7 +96,7 @@ _taskDataStore setVariable ["fnc_getSubtaskEndTimePrepare", {
 	[_tds, "subtaskStartTimePrepare"] call (_tds getVariable "_fnc_getSubtaskEndTime")
 }];
 
-/*
+/* 
 PRIVATE METHOD -- should only be used by methods defined below.
 
 Get all players that match specific conditions in a specific area.
@@ -217,7 +217,7 @@ _taskDataStore setVariable ["fnc_changeAreaMarkerColor", {
 	(_tds getVariable "areaMarkerName") setMarkerColor _color;
 }];
 
-
+	
 /*
 Base "Go Away" subtask -- Players entered the AO too early. Turn it black, delete everything and tell them to GTFO!
 
@@ -240,7 +240,7 @@ _taskDataStore setVariable ["fnc_subtaskGoAway", {
 		// otherwise task block above will call this on every task tick
 
 		private _nextsubtaskDurationSeconds = _tds getVariable "subtaskDurationSeconds";
-
+		
 		[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
 
 		[
@@ -253,9 +253,9 @@ _taskDataStore setVariable ["fnc_subtaskGoAway", {
 			"INFO",
 			format ["Task: Prepare: GoAway: Players have now left the AO, switching to next subtask: %1", _nextSubtask]
 		] call para_g_fnc_log;
-
+		
 		[
-			"SUCCEEDED",
+			"SUCCEEDED", 
 			[[_nextSubtask, _obj_pos]]
 		] call _fnc_finishSubtask;
 
@@ -390,7 +390,7 @@ _taskDataStore setVariable ["fnc_subtaskRTB", {
 		_tds setVariable ["generated", false];
 
 		[
-			"FAILED",
+			"FAILED", 
 			[
 				["go_away_rtb", getMarkerPos "starting_point"]
 			]
@@ -456,7 +456,7 @@ _taskDataStore setVariable ["fnc_subtaskPrepare", {
 		[_tds] call (_tds getVariable "fnc_resetWarningState");
 
 		[
-			"FAILED",
+			"FAILED", 
 			[
 				["go_away_prepare", _tds getVariable ["stagingPos", getMarkerPos "starting_point"]]
 			]

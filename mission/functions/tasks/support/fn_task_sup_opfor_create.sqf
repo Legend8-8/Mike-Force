@@ -40,10 +40,9 @@ _taskDataStore setVariable ["wait_for_tower", {
 	if (missionNamespace getVariable ["vn_mf_coms_tower_built_in_ao", false]) exitWith {
 		["SUCCEEDED", [["create_units"]]] call _fnc_finishSubtask;
 	};
-	private _aoMarker = ["activeDefendCircle", "activeZoneCircle"] select ("activeZoneCircle" in allMapMarkers);
 
 	private _towersInAO = nearestObjects [
-		getMarkerPos _aoMarker,
+		getMarkerPos "activeZoneCircle",
 		["Land_vn_ttowersmall_2_f"],
 		500
 	];
@@ -70,8 +69,7 @@ _taskDataStore setVariable ["create_units", {
 	};
 
 	// Get tower position
-	private _aoMarker = ["activeDefendCircle", "activeZoneCircle"] select ("activeZoneCircle" in allMapMarkers);
-	private _towersInAO = entities "Land_vn_ttowersmall_2_f" inArea _aoMarker;
+	private _towersInAO = entities "Land_vn_ttowersmall_2_f" inArea "activeZoneCircle";
 	if (count _towersInAO == 0) exitWith {
 		["FAILED"] call _fnc_finishSubtask;
 		["FAILED"] call _fnc_finishTask;

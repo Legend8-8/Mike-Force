@@ -25,7 +25,7 @@ params ["_taskDataStore"];
 /*
 Constants
 */
-_taskDataStore setVariable ["holdDuration", 60];
+_taskDataStore setVariable ["holdDuration", 40 * 60];
 _taskDataStore setVariable ["flagTimerReduction", 10 * 60];
 _taskDataStore setVariable ["failureDuration", 5 * 60];
 
@@ -121,7 +121,7 @@ _taskDataStore setVariable ["INIT", {
 	if ((count _candidate_bases_to_attack) > 0) then {
 
 		diag_log format [
-			"Counterattack: Co-Ordinates of FOBs within range of counter attack: %1",
+			"Counterattack: Co-Ordinates of FOBs within range of counter attack: %1", 
 			_candidate_bases_to_attack apply {getPos (_x # 1)}
 		];
 
@@ -195,7 +195,7 @@ _taskDataStore setVariable ["INIT", {
 
 	[_tds] call (_taskDataStore getVariable "fnc_update_hold_time");
 
-	if (_prepTime > 0) then
+	if (_prepTime > 0) then 
 	{
 		["CounterAttackPreparing", ["", (_prepTime / 60) toFixed 0]] remoteExec ["para_c_fnc_show_notification", 0];
 		[] call vn_mf_fnc_timerOverlay_removeGlobalTimer;
@@ -239,7 +239,7 @@ Parameter: _taskDataStore (_tds)
 _taskDataStore setVariable ["prepare_zone", {
 	params ["_tds"];
 
-	// set up the attack objective on the first tick so the AI have
+	// set up the attack objective on the first tick so the AI have 
 	// time to make it to the FOB
 
 	// this means they can arrive to the FOB early.
@@ -332,9 +332,9 @@ _taskDataStore setVariable ["_fnc_check_ai_failure_condition", {
 	private _lastCheck = _tds getVariable "lastCheck";
 
 	//Side check - downed players don't count. Nor do players in aircraft. Ground vehicles are fair game.
-	private _alivePlayersInZone = allPlayers inAreaArray _areaDescriptor
+	private _alivePlayersInZone = allPlayers inAreaArray _areaDescriptor 
 		select {
-			alive _x
+			alive _x 
 			&& {
 			(side _x == west || side _x == independent)
 			&& {
@@ -391,7 +391,7 @@ _taskDataStore setVariable ["_fnc_check_ai_failure_condition", {
 }];
 
 
-/*
+/* 
 remove all the network'd variables and JIP queue ID for any flags.
 
 parameters: None
@@ -438,7 +438,7 @@ _taskDataStore setVariable ["defend_zone", {
 
 }];
 
-/*
+/* 
 just a duplicate of defend base, but using different config title
 
 parameters: _taskDataStore (_tds)
@@ -487,7 +487,7 @@ _taskDataStore setVariable ["defend_flag", {
 	/*
 	failure -- flag object has been deleteVehicle'd
 
-	occurs when either
+	occurs when either 
 	- Dac Cong full lowered the flag through the action (deleteVehicle'd)
 	- the flag has been hammered out of existence (Bluefor tried to be clever)
 	- a zeus has deleted the flag (badAdmin)

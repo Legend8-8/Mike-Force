@@ -59,9 +59,8 @@ if (_isOpfor) then {
 	private _supportAccessRadius = missionNamespace getVariable ["vn_mf_opfor_support_access_radius", 300];
 	if (_sandbagValue <= 0) then {_sandbagValue = 10;};
 	private _canCreate = false;
-	private _aoMarker = ["activeDefendCircle", "activeZoneCircle"] select ("activeZoneCircle" in allMapMarkers);
-	private _aoCenter = getMarkerPos _aoMarker;
-	private _aoRadius = selectMax (getMarkerSize _aoMarker);
+	private _aoCenter = getMarkerPos "activeZoneCircle";
+	private _aoRadius = selectMax (getMarkerSize "activeZoneCircle");
 	private _towerParts = nearestObjects [_aoCenter, ["Land_vn_ttowersmall_2_f","vn_ttowersmall_2_f_part0","vn_ttowersmall_2_f_part1"], _aoRadius];
 	private _paraTowers = _towerParts select {not isNull (_x getVariable ["para_g_building", objNull])};
 	private _functionalTowers = (nearestObjects [_aoCenter, ["Land_vn_ttowersmall_2_f"], _aoRadius]) select {

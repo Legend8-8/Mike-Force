@@ -126,8 +126,7 @@ private _spawnDirAngle = switch (_targetTeam) do {
 [format ["create_support_opfor_troops start: task=%1 coords=%2 player=%3 dir=%4", _taskClass, _coords, name _requestingPlayer, _targetTeam], _targetOwner] call _debugMsg;
 ["Checkpoint: start validation", _targetOwner] call _debugMsg;
 
-private _aoMarker = ["activeDefendCircle", "activeZoneCircle"] select ("activeZoneCircle" in allMapMarkers);
-private _markerExists = _aoMarker in allMapMarkers;
+private _markerExists = "activeZoneCircle" in allMapMarkers;
 [format ["Checkpoint: markerExists check marker=%1", _markerExists], _targetOwner] call _debugMsg;
 
 if !_markerExists exitWith {
@@ -137,8 +136,8 @@ if !_markerExists exitWith {
 private _center = [];
 private _radius = 0;
 try {
-    _center = markerPos _aoMarker;
-    _radius = selectMax ((getMarkerSize _aoMarker) apply {abs _x});
+    _center = markerPos "activeZoneCircle";
+    _radius = selectMax ((getMarkerSize "activeZoneCircle") apply {abs _x});
 } catch {
     diag_log format ["[OPFOR ERROR] markerPos/Size exception: %1", _exception];
 };
