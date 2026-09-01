@@ -69,8 +69,9 @@ if (_groupID == "DacCong") then {
 	} forEach [["North", "N"], ["East", "E"], ["South", "S"], ["West", "W"]];
 	VN_TR_SUPREQ_TEAM_CTRL lbSetCurSel -1;
 	vn_tr_supportMissionInfo set [2, ""];
-	private _aoCenter = getMarkerPos "activeZoneCircle";
-	private _aoRadius = selectMax (getMarkerSize "activeZoneCircle");
+	private _aoMarker = ["activeDefendCircle", "activeZoneCircle"] select ("activeZoneCircle" in allMapMarkers);
+	private _aoCenter = getMarkerPos _aoMarker;
+	private _aoRadius = selectMax (getMarkerSize _aoMarker);
 	private _towerParts = nearestObjects [_aoCenter, ["Land_vn_ttowersmall_2_f","vn_ttowersmall_2_f_part0","vn_ttowersmall_2_f_part1"], _aoRadius];
 	private _paraTowerParts = _towerParts select {not isNull (_x getVariable ["para_g_building", objNull])};
 	private _functionalTowers = (nearestObjects [_aoCenter, ["Land_vn_ttowersmall_2_f"], _aoRadius]) select {
